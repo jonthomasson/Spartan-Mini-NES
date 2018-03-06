@@ -1,23 +1,10 @@
-**fpga_nes** is an fpga-targeted Nintento Entertainment System emulator written in Verilog.  It is currently under development, and is most notably missing support for mappers and the DMC sound channel.  At this point, it runs most NROM games capably (e.g., Super Mario Brothers, Excitebike).
 
-In addition, this project includes a C++ Windows application called NesDbg, which communicates with the FPGA over USB UART to load ROMs, run unit tests, readwrite memory, etc.
+I've been a fan of the original NES from childhood. To me it was a magical system, which captured my interest for the first time one Christmas morning. As an adult, I still have fond memories of that console. Part of the impetus for this project came from those childhood memories.  
+  
+The Spartan Mini NES, as its name implies, has at its foundation a [Spartan Mini FPGA board](https://github.com/jonthomasson/SpartanMini). The Spartan Mini is a development board built around the Spartan 6 FPGA by Xilinx. The NES core that runs on the FPGA is a modified version of Brian Bennett's design. To facilitate the transfer of games from the SD card to the FPGA, I'm using a Parallax Propeller, which is connected to the FPGA with a serial link.
 
-**Hardware Setup:**
+![enter image description here](https://lh3.googleusercontent.com/jdio0PkBjX8YVDikoaz8WnegmEX6hikknsmlF16jY8GNs1Zmoj6PI6GNtpVPSt88ABAjjLr6lJuf-iQg8eNMtJ2A3MygUZ8Zj8zgJB0as9Ph7aKY-mxrxRklFC-Co_tGoxe5LYkHvikn6fWuyTUUU8swRG2gUKDfUjpazZCkGbx8wmCuXMj3_mcGo_amA6NKJzARYRbo7R1r4UWg3QVIsrenQgO33-XxseDmi3W6dc11o_oZzXBVq6XMi1lStzLcbhdC4LWhZy66qSe_Iz82Q2SATjBF-D5dlooZtsYKYeWjtRQ4qdEBPwDCZo_IQQb_t91g4DcUy6ufdrwcIG0AzXI5-yEKMLTE6NkCaio0JA1013QXu7bK--sFaEchM9-4TqB4uVUhcMLOj1SD8U1Q7x2oS-n9uCXf1rSnoIO6p-m9rMXLhjufDAPaUMYM7yjyVm_hrhCteg7x5U7Tq1AWwHI0FVh0rr-9BjzKcDZTmzcCr73eXqubeElHY8TpLESPX_O0VTFat5yW-iLQEG9-ru8bkcQiL2cMWzNcdZrilpJeAW2AZOQKVM4jOUG7kjCxAjm__ltIKfDcNNmUfwqF6lpjmToH01X1PrDOgzqzj9x5z6Y_ipSYooThscyNoGNGBdtHZMAuXUIwuVX8PZEPtfVQNUCWyEg_lA=w876-h493-no)
 
-![alt text](http://1.bp.blogspot.com/-BfVh-h9vj14/T-9pofsWmEI/AAAAAAAAAG8/kW62NiNQTsE/s320/setup.jpg "Title")
+https://lh3.googleusercontent.com/eDESdc2rDMjiCj7vpQNRQ5BHRBPUhTzb1SBAZPr5uGH3wgXaLr6VexRoJYoIc6QwZsrZTxS7TfQCGPdtkSV3DwcfL5YCtaJoB-7TmVHkr8YrQ9H01ZMn2x2knWwQUNKnBiI6UoT7IfcPYr7nrmOVKXCiIl895K6spiTPMQuosWuAICvJAYPM3qlv1dCjEe-j-WkFjNAUqMDbJ4qbpZolSCW8FQZpFxJGLrX26Uijj_vxQ9Lhm8DCs6y1_PryMGzEPFml55cbOkiCVSayBTlA0c5-SGwDkQkw7ddZsSR0TwXcLzz9wECPMj1Gs-nDk1W_bS9CJZ_3svqCQy11LrH9egH_Tjr1l-6IuU79HPb390aRPi33EP-soD3XSqzfuWF1ClH7XdVdzt0AmuPAXIj-b01kWx-RkSEGF3IBkC8LVFzGpDc_BBgot-_Gh5BAz3muxL_y0jZF-STEhkXkPiqh_R3tNhubjix3rCMX3s712fwzZ3pNAGAR-kJvA03Vp9Un6nd0UjDaPbAIji8eDPEVxZ1HJafunfselciNWvINJCVyaJeC28ikfY0-Jvk4PpkdMuKFAGv_NhyVUYAZZQ857_kEcjjR5u4zQufW4mvxUnS2VlQ4lT6fh8hvWEGntp5PBB9wNMxlS8l8Du0qVg7QU9JVLAEOnBTowg=w1096-h616-no
 
-1. [Nexys 3 Spartan-6 FPGA board](http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,400,897&Prod=NEXYS3). ($119 / $199)
-2. Micro-USB connection for FPGA power and programming.
-3. VGA display connection for NES video output.
-4. Micro-USB connection for communication between NES and NesDbg software.
-5. [PmodBB Bread Board](http://www.digilentinc.com/Products/Detail.cfm?NavPath=2,401,471&Prod=PMOD-BB) for a solderless joypad connection.  ($20)
-6. [NES Joypad Adapter](http://www.parallax.com/StoreSearchResults/tabid/768/txtSearch/nes/List/0/SortField/4/ProductID/613/Default.aspx) to accept input from joypads.  ($5)
-7. 2 [NES Joypads](http://www.parallax.com/Store/Accessories/Hardware/tabid/162/txtSearch/nes/List/0/SortField/4/ProductID/528/Default.aspx) to accept user input.  (2 * $5)
-8. [PmodAMP1](http://www.digilentinc.com/Products/Detail.cfm?Prod=PMOD-AMP1) to amplify NES PWM audio output.  ($20)
-9. [Speaker](http://www.digilentinc.com/Products/Catalog.cfm?NavPath=2,393&Cat=3) to play the NES sound.  ($6)
-
-
-**Development Environment:**
-
-1. [ISE 14.1 WebPack](http://www.xilinx.com/support/download/index.htm) (free)
-2. [Visual Studio 2010 Express](http://www.microsoft.com/visualstudio/en-us/products/2010-editions/visual-cpp-express) (free)
+![enter image description here](https://lh3.googleusercontent.com/_HqCWBnYBBPPFv6TVgBF70x3tgMQYnFRfYVzEEYq7WgGeNg_p2d4F0wipxOTm90URuIhHpjV42Y3xSw_Vke96nhthFndIvvYJkmAXga6sUvCBbFI5CwzxC4CLTUGcoKu2HJdl1paQBcp6uA5A5GQMpoX6Osw1T7uW1eTtSOUsCOx_C8a1kCSAMbTwZFFw8HvIz0kfFSp8e3CKVMj4nzUGHPHrGmP7v7FQiC_47wJrgnyUEsQ3NIo9x0hszVRoabyBGZgFGfuWnUmnnqT5XnJ_h07oZqf3zextqHIBmOgbMrKa50Jo0Et8oxynQry3OEq2pBIfp-tu8OViUtqT4AfMcasYstGEhp00Cvqi4Mg7cw_SJEfmtzhhBB17H7bivDMrshme-FyWGfHLz0jPQHrV6HrxWKha2r_Q-j04GVvSswMfg_bzEe-RaLXLFs7sSIjxYOYa8PQ17TL1fD73-9Qpr4YtJuJ982uVlATe1pQT70LUfEIEn6pLneGLiB0hu4c43zoaxKhew5ARCvwE8Tepb3AEYxMKtdqFyyGOhtx_QhZt0rWzfNe-bT49-XRNfq2VGyTD_01IeuAVPBVmwY5wCgh14TdxrxsuwMRurWdwge3S8equpKkKd2Jq8xnfhnsnutgAZfHHeDbOIEuApEskyYDwmsFT85COA=w1096-h616-no)
