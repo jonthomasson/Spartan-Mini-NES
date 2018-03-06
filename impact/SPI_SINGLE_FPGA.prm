@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\impact\//SPI_SINGLE_FPGA -s 4096 -u 0000 C:/Users/Stache/Documents/Xilinx_Projects/spartan_mini/fpga_nes-master_tft2/hw/ise/nes_top.bit -spi 
+
+PROM C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\impact\SPI_SINGLE_FPGA.prm map: Sat Nov 25 06:58:35 2017
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          4096K
+PROM start    0000:0000
+PROM end      003f:ffff
+PROM checksum 3b3a88ff
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0005:32bf     Nov 25 06:45:57 2017 C:/Users/Stache/Documents/Xilinx_Projects/spartan_mini/fpga_nes-master_tft2/hw/ise/nes_top.bit

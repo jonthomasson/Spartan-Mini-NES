@@ -1,0 +1,11 @@
+# PROMGEN: Xilinx Prom Generator P.20131013
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.20131013
+DATE            02/12/2018 - 22:12
+SOURCE          C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\impact\spartan_mini_nes.mcs
+DEVICE          2048K
+DATA_WIDTH      2
+FILL_DATA       0xFF
+SIGNATURE       0x1B5A893D
+START_ADDRESS   0x00000000 END_ADDRESS 0x000532BF DIRECTION_UP   "C:/Users/Stache/Documents/Xilinx_Projects/spartan_mini/fpga_nes-master_tft2/hw/ise/nes_top.bit" 6slx9tqg144

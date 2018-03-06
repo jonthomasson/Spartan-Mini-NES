@@ -1,0 +1,156 @@
+## This file is a general .ucf for the Spartan Mini rev 1.d board
+## To use it in a project:
+## - remove or comment the lines corresponding to unused pins
+## - rename the used signals according to the project
+
+##========================================================
+## Clock signal
+##========================================================
+NET "CLK_100MHZ" TNM_NET = sys_clk_pin;
+TIMESPEC TS_sys_clk_pin  = PERIOD sys_clk_pin 100000 kHz;
+
+NET "CLK_100MHZ"    LOC = P55;
+
+##=========================================================
+## 1 slide switch
+##==========================================================			
+#NET "sw1"  LOC = P78;
+
+##========================================================
+## Buttons
+##========================================================
+NET "BTN_SOUTH"   LOC = P92;	
+NET "BTN_EAST"   LOC = P88;
+#NET "reset_n"  	LOC = P37;	
+
+##========================================================
+## Usb-RS232 interface
+##========================================================
+#NET "TXD"  LOC = P74	| IOSTANDARD = "LVCMOS33"; 	
+#NET "RXD"  LOC = P75	| IOSTANDARD = "LVCMOS33"; 	
+
+##========================================================
+## programmable leds
+##========================================================
+#NET "led<0>"  LOC = P79	| IOSTANDARD = "LVCMOS33"; 	
+#NET "led<1>"  LOC = P80	| IOSTANDARD = "LVCMOS33"; 	
+#NET "led<2>"  LOC = P81	| IOSTANDARD = "LVCMOS33"; 
+#NET "led<3>"  LOC = P82	| IOSTANDARD = "LVCMOS33"; 	
+#NET "led<4>"  LOC = P83	| IOSTANDARD = "LVCMOS33"; 
+#NET "led<5>"  LOC = P84	| IOSTANDARD = "LVCMOS33"; 
+#NET "led<6>"  LOC = P85	| IOSTANDARD = "LVCMOS33"; 
+#NET "led<7>"  LOC = P87	| IOSTANDARD = "LVCMOS33"; 
+
+##========================================================
+## PSRAM 8Mb
+##========================================================
+#NET "MemAdr<0>"  LOC = P121	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<1>"  LOC = P120	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<2>"  LOC = P119	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<3>"  LOC = P118	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<4>"  LOC = P117	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<5>"  LOC = P132	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<6>"  LOC = P133	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<7>"  LOC = P134	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<8>"  LOC = P8	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<9>"  LOC = P9	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<10>"  LOC = P10	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<11>"  LOC = P11	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<12>"  LOC = P27	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<13>"  LOC = P26	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<14>"  LOC = P24	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<15>"  LOC = P23	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<16>"  LOC = P22	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<17>"  LOC = P12	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemAdr<18>"  LOC = P7	| IOSTANDARD = "LVCMOS33"; 	
+
+#NET "MemDB<0>"  LOC = P124	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemDB<1>"  LOC = P126	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemDB<2>"  LOC = P127	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemDB<3>"  LOC = P131	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemDB<4>"  LOC = P14	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemDB<5>"  LOC = P15	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemDB<6>"  LOC = P16	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemDB<7>"  LOC = P17	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemDB<8>"  LOC = P6	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemDB<9>"  LOC = P5	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemDB<10>"  LOC = P2	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemDB<11>"  LOC = P1	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemDB<12>"  LOC = P143	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemDB<13>"  LOC = P142	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemDB<14>"  LOC = P141	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemDB<15>"  LOC = P140	| IOSTANDARD = "LVCMOS33"; 	
+
+#NET "RamUB"  LOC = P138	| IOSTANDARD = "LVCMOS33"; 	
+#NET "RamLB"  LOC = P139	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemOE"  LOC = P137	| IOSTANDARD = "LVCMOS33"; 	
+#NET "MemWR"  LOC = P21	| IOSTANDARD = "LVCMOS33"; 	
+#NET "RamCS"  LOC = P123	| IOSTANDARD = "LVCMOS33"; 	
+
+##========================================================
+## 16Mb SPI Flash
+##========================================================
+#NET "SCS"  LOC = P38	| IOSTANDARD = "LVCMOS33"; 
+#NET "SDI"  LOC = P65	| IOSTANDARD = "LVCMOS33"; 
+#NET "SCK"  LOC = P70	| IOSTANDARD = "LVCMOS33"; 
+#NET "SDO"  LOC = P64	| IOSTANDARD = "LVCMOS33"; 
+
+##========================================================
+## JA PMOD
+##========================================================
+NET "sw<0>"  LOC = P101	| IOSTANDARD = "LVCMOS33"; 
+NET "sw<1>"  LOC = P99	| IOSTANDARD = "LVCMOS33"; 
+NET "sw<2>"  LOC = P97	| IOSTANDARD = "LVCMOS33"; 
+NET "sw<3>"  LOC = P94	| IOSTANDARD = "LVCMOS33"; 
+NET "TFT_BLUE[1]"  LOC = P100	| IOSTANDARD = "LVCMOS33"; 
+NET "TFT_BLUE[0]"  LOC = P98	| IOSTANDARD = "LVCMOS33"; 
+NET "JOYPAD<5>"  LOC = P95	| IOSTANDARD = "LVCMOS33"; 
+NET "btn_menu"  LOC = P93	| IOSTANDARD = "LVCMOS33";  
+
+##========================================================
+## JB PMOD
+##========================================================
+NET "JOYPAD<0>"  LOC = P116	| IOSTANDARD = "LVCMOS33"; 
+NET "JOYPAD<1>"  LOC = P114	| IOSTANDARD = "LVCMOS33"; 
+NET "JOYPAD<2>"  LOC = P111	| IOSTANDARD = "LVCMOS33"; 
+NET "JOYPAD<3>"  LOC = P104	| IOSTANDARD = "LVCMOS33"; 
+NET "JOYPAD<4>"  LOC = P115	| IOSTANDARD = "LVCMOS33"; 
+#NET "JOYPAD<5>"  LOC = P112	| IOSTANDARD = "LVCMOS33"; 
+NET "JOYPAD<6>"  LOC = P105	| IOSTANDARD = "LVCMOS33"; 
+NET "JOYPAD<7>"  LOC = P102	| IOSTANDARD = "LVCMOS33"; 
+
+##========================================================
+## JC PMOD
+##========================================================
+NET "TFT_RED[2]"  LOC = P66	| IOSTANDARD = "LVCMOS33"; 
+NET "TFT_RED[1]"  LOC = P61	| IOSTANDARD = "LVCMOS33"; 
+NET "TFT_RED[0]"  LOC = P58	| IOSTANDARD = "LVCMOS33"; 
+#NET "NES_JOYPAD_LATCH"  LOC = P57	| IOSTANDARD = "LVCMOS33"; 
+#NET "NES_JOYPAD_DATA2"  LOC = P67	| IOSTANDARD = "LVCMOS33"; 
+#NET "NES_JOYPAD_CLK"  LOC = P62	| IOSTANDARD = "LVCMOS33"; 
+#NET "JC<6>"  LOC = P59	| IOSTANDARD = "LVCMOS33"; 
+NET "AUDIO"  LOC = P56	| IOSTANDARD = "LVCMOS33"; 
+
+##========================================================
+## JD PMOD
+##========================================================
+#NET "TFT_GREEN[0]"  LOC = P50	| IOSTANDARD = "LVCMOS33"; 
+NET "TFT_GREEN[0]"  LOC = P47	| IOSTANDARD = "LVCMOS33"; 
+NET "TFT_GREEN[1]"  LOC = P45	| IOSTANDARD = "LVCMOS33"; 
+NET "TFT_GREEN[2]"  LOC = P44	| IOSTANDARD = "LVCMOS33"; 
+NET "TFT_DOTCLK"  LOC = P51	| IOSTANDARD = "LVCMOS33"; 
+NET "TFT_HSYNC"  LOC = P48	| IOSTANDARD = "LVCMOS33"; 
+NET "TFT_VSYNC"  LOC = P46	| IOSTANDARD = "LVCMOS33"; 
+NET "TFT_DE"  LOC = P43	| IOSTANDARD = "LVCMOS33"; 
+
+##========================================================
+## JE PMOD
+##========================================================
+#NET "PROP_File_Rx"  LOC = P40	| IOSTANDARD = "LVCMOS33"; 
+#NET "PROP_File_Tx"  LOC = P34	| IOSTANDARD = "LVCMOS33"; 
+NET "RXD"  LOC = P32	| IOSTANDARD = "LVCMOS33"; 
+NET "PROP_Tx"  LOC = P30	| IOSTANDARD = "LVCMOS33"; 
+#NET "JE<4>"  LOC = P41	| IOSTANDARD = "LVCMOS33"; 
+#NET "JE<5>"  LOC = P35	| IOSTANDARD = "LVCMOS33"; 
+NET "TXD"  LOC = P33	| IOSTANDARD = "LVCMOS33"; 
+NET "PROP_Rx"  LOC = P29	| IOSTANDARD = "LVCMOS33"; 
