@@ -1,6 +1,6 @@
 I've been a fan of the original NES from childhood. To me it was a magical system, which captured my interest for the first time one Christmas morning. As an adult, I still have fond memories of that console. Part of the impetus for this project came from those childhood memories.  
   
-The Spartan Mini NES, as its name implies, has at its foundation a [Spartan Mini FPGA board](https://github.com/jonthomasson/SpartanMini). The Spartan Mini is a development board built around the Spartan 6 FPGA by Xilinx. To facilitate the transfer of games from the SD card to the FPGA, I'm using a Parallax Propeller, which is connected to the FPGA with a serial link.
+The Spartan Mini NES, as its name implies, has at its foundation a [Spartan Mini FPGA board](https://github.com/jonthomasson/SpartanMini). The Spartan Mini is a development board I built around the Spartan 6 FPGA by Xilinx. To facilitate the transfer of games from the SD card to the FPGA, I'm using a Parallax Propeller, which is connected to the FPGA with a serial link.
 
 At its heart, this project relies on the Spartan 6 FPGA by Xilinx. I'm using the TQFP 144 pin version for ease of soldering. To facilitate breaking out all of the pins and getting the project up and running quickly, I've used the  [Spartan Mini FPGA board](https://github.com/jonthomasson/SpartanMini), as well as the perfboard shield.
 
