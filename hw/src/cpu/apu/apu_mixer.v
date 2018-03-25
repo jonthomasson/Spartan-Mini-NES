@@ -29,7 +29,7 @@ module apu_mixer
 (
   input  wire       clk_in,       // system clock signal
   input  wire       rst_in,       // reset signal
-  input  wire [3:0] mute_in,      // mute specific channels
+  //input  wire [3:0] mute_in,      // mute specific channels
   input  wire [3:0] pulse0_in,    // pulse 0 channel input
   input  wire [3:0] pulse1_in,    // pulse 1 channel input
   input  wire [3:0] triangle_in,  // triangle channel input
@@ -194,10 +194,10 @@ always @(posedge clk_in)
 
 assign d_pwm_cnt = q_pwm_cnt + 4'h1;
 
-assign pulse0   = (mute_in[0]) ? 4'h0 : pulse0_in;
-assign pulse1   = (mute_in[1]) ? 4'h0 : pulse1_in;
-assign triangle = (mute_in[2]) ? 4'h0 : triangle_in;
-assign noise    = (mute_in[3]) ? 4'h0 : noise_in;
+assign pulse0   =   pulse0_in;
+assign pulse1   =  pulse1_in;
+assign triangle =  triangle_in;
+assign noise    =  noise_in;
 
 assign audio_out = mixed_out > q_pwm_cnt;
 

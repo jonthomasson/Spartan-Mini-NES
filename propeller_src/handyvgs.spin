@@ -9,6 +9,8 @@ CON _clkmode = xtal1 + pll16x
     TX_PIN   = 14'30
     RX_PIN_FILE = 13 'dedicated serial rx for file transfer
     TX_PIN_FILE = 12 'dedicated serial tx for file transfer
+    RESET_PIN      = 4    'pin used to reset fpga
+    RESET_PERIOD  = 20_000_000 '1/2 second
     BAUD     = 115_200
     BAUD_FILE_TX     = 38_400'115_200
     NUM_COLUMNS = 80 'number of columns in tile map
@@ -71,6 +73,16 @@ PUB main
   get_stats 'get file stats 
           
   send_page(current_page) 'display first page
+                          '
+'   send reset to fpga
+    outa[RESET_PIN] := 0
+    dira[RESET_PIN] := 1 'set reset pin as output
+    waitcnt(RESET_PERIOD + cnt)
+    outa[RESET_PIN] := 1
+    dira[RESET_PIN] := 1
+    waitcnt(RESET_PERIOD + cnt)
+    dira[RESET_PIN] := 0  'set reset pin as input (this makes it so the pin isn't held low forever)
+    
   
   
   'send_file_byname2(string("excite~1.nes"))

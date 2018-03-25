@@ -34,7 +34,7 @@ module nes_top
   input  wire       BTN_SOUTH,         // reset push button
   input  wire       BTN_EAST,          // console reset
   input  wire       RXD,               // rs-232 rx signal
-  input  wire [3:0] SW,                // switches
+  //input  wire [3:0] SW,                // switches
   //input  wire       NES_JOYPAD_DATA1,  // joypad 1 input signal
   //input  wire       NES_JOYPAD_DATA2,  // joypad 2 input signal
   input  wire [7:0] JOYPAD,
@@ -96,7 +96,7 @@ rp2a03 rp2a03_blk(
   //.jp_latch(NES_JOYPAD_LATCH),
   .joypad(JOYPAD),
   .joypad_deb(joypad_deb),  
-  .mute_in(SW),
+  //.mute_in(4'b1111),
   .audio_out(AUDIO_PCM),
   .dbgreg_sel_in(rp2a03_dbgreg_sel),
   .dbgreg_d_in(rp2a03_dbgreg_din),
@@ -117,7 +117,7 @@ sigma_delta_dac sigma_delta_dac (
 );
 
   //menu toggle circuit
-  reg toggle_menu;
+  reg toggle_menu = 1'b1; //default to showing menu at startup
   wire btn_menu_deb;
   
   //debounce for menu toggle button
@@ -125,7 +125,7 @@ sigma_delta_dac sigma_delta_dac (
       (.clk(CLK_100MHZ), .reset(), .sw(btn_menu),
        .db_level(), .db_tick(btn_menu_deb));
 		 
-  always @(posedge CLK_100MHZ, posedge BTN_EAST) begin
+  always @(posedge CLK_100MHZ) begin
 		if(BTN_EAST)
 			toggle_menu = 1'b0;
 		else

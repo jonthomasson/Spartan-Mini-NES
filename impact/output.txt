@@ -1,12 +1,11 @@
 Storage Target: SPI Flash Single FPGA
-16M
+Auto Select Storage Device
 FF
-spartan_mini_nes
-C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\impact\
+spartan mini nes v1
+C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\impact/
 
 MCS
-No
-an_mini\fpga_nes-master_tft2\impact\
+_tft2\impact\
 
 MCS
 Yes

@@ -29,7 +29,7 @@ module apu
 (
   input  wire        clk_in,    // system clock signal
   input  wire        rst_in,    // reset signal
-  input  wire [ 3:0] mute_in,   // disable specific audio channels
+  //input  wire [ 3:0] mute_in,   // disable specific audio channels
   input  wire [15:0] a_in,      // addr input bus
   input  wire [ 7:0] d_in,      // data input bus
   input  wire        r_nw_in,   // read/write select
@@ -216,7 +216,7 @@ assign noise_wr = ~r_nw_in && (a_in[15:2] == NOISE_CHANNEL_CNTL_MMR_ADDR[15:2]);
 apu_mixer apu_mixer_blk(
   .clk_in(clk_in),
   .rst_in(rst_in),
-  .mute_in(mute_in),
+  //.mute_in(mute_in),
   .pulse0_in(pulse0_out),
   .pulse1_in(pulse1_out),
   .triangle_in(triangle_out),

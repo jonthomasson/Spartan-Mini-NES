@@ -19,8 +19,8 @@ NET "CLK_100MHZ"    LOC = P55;
 ##========================================================
 ## Buttons
 ##========================================================
-NET "BTN_SOUTH"   LOC = P92;	
-NET "BTN_EAST"   LOC = P88;
+#NET "BTN_SOUTH"   LOC = P92;	
+#NET "BTN_EAST"   LOC = P88;
 #NET "reset_n"  	LOC = P37;	
 
 ##========================================================
@@ -98,10 +98,10 @@ NET "BTN_EAST"   LOC = P88;
 ##========================================================
 ## JA PMOD
 ##========================================================
-NET "sw<0>"  LOC = P101	| IOSTANDARD = "LVCMOS33"; 
-NET "sw<1>"  LOC = P99	| IOSTANDARD = "LVCMOS33"; 
-NET "sw<2>"  LOC = P97	| IOSTANDARD = "LVCMOS33"; 
-NET "sw<3>"  LOC = P94	| IOSTANDARD = "LVCMOS33"; 
+NET "BTN_SOUTH"  LOC = P101	| IOSTANDARD = "LVCMOS33"; #core reset - hook to propeller on startup
+NET "BTN_EAST"  LOC = P99	| IOSTANDARD = "LVCMOS33"; #nes reset (ie reset game cart)
+#NET "sw<2>"  LOC = P97	| IOSTANDARD = "LVCMOS33"; 
+#NET "sw<3>"  LOC = P94	| IOSTANDARD = "LVCMOS33"; 
 NET "TFT_BLUE[1]"  LOC = P100	| IOSTANDARD = "LVCMOS33"; 
 NET "TFT_BLUE[0]"  LOC = P98	| IOSTANDARD = "LVCMOS33"; 
 NET "JOYPAD<5>"  LOC = P95	| IOSTANDARD = "LVCMOS33"; 
