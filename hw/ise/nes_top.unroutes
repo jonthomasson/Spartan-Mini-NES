@@ -1,0 +1,13 @@
+Release 14.7 - par P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Fri Mar 16 20:33:25 2018
+
+All signals are completely routed.
+
+   ppu_blk/ppu_spr_blk/Mram_m_stm1_RAMD_D1_O
+   ppu_blk/ppu_spr_blk/Mram_m_stm2_RAMD_D1_O
+   ppu_blk/ppu_spr_blk/Mram_m_stm3_RAMD_D1_O
+   ppu_blk/ppu_spr_blk/Mram_m_stm4_RAMD_D1_O
+
+

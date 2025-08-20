@@ -1,0 +1,383 @@
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 3648720 paths analyzed, 13103 endpoints analyzed, 989 failing endpoints
+ 989 timing errors detected. (989 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  12.306ns.
+--------------------------------------------------------------------------------
+Slack:                  -2.306 (requirement - (data path - clock path skew + uncertainty))
+  Source:               ppu_blk/ppu_spr_blk/m_oam_FF_1883 (FF)
+  Destination:          ppu_blk/ppu_spr_blk/Mram_m_stm2_RAMC_D1 (RAM)
+  Requirement:          10.000
+  Data Path Delay:      11.842 (Levels of Logic = 3)
+  Clock Path Skew:      -0.429ns (0.687 - 1.116)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035
+
+  Clock Uncertainty:          0.035  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: ppu_blk/ppu_spr_blk/m_oam_FF_1883 to ppu_blk/ppu_spr_blk/Mram_m_stm2_RAMC_D1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y44.DQ       Tcko                  0.391   ppu_blk/ppu_spr_blk/m_oam_ff_1883
+                                                       ppu_blk/ppu_spr_blk/m_oam_FF_1883
+    SLICE_X12Y21.B5      net (fanout=2)        3.577   ppu_blk/ppu_spr_blk/m_oam_ff_1883
+    SLICE_X12Y21.B       Tilo                  0.203   ppu_blk/ppu_spr_blk/m_oam_ff_1259
+                                                       ppu_blk/ppu_spr_blk/inst_LPM_MUX35_133
+    SLICE_X6Y15.B3       net (fanout=1)        4.026   ppu_blk/ppu_spr_blk/inst_LPM_MUX35_133
+    SLICE_X6Y15.B        Tilo                  0.205   ppu_blk/ppu_spr_blk/m_oam_ff_1611
+                                                       ppu_blk/ppu_spr_blk/inst_LPM_MUX35_8
+    SLICE_X11Y14.A1      net (fanout=1)        2.236   ppu_blk/ppu_spr_blk/inst_LPM_MUX35_8
+    SLICE_X11Y14.A       Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1738
+                                                       ppu_blk/ppu_spr_blk/nes_x_in<7>241
+    SLICE_X16Y15.CI      net (fanout=1)        0.901   ppu_blk/ppu_spr_blk/_n0568<27>
+    SLICE_X16Y15.CLK     Tds                   0.044   ppu_blk/ppu_spr_blk/_n0569<11>
+                                                       ppu_blk/ppu_spr_blk/Mram_m_stm2_RAMC_D1
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -2.299 (requirement - (data path - clock path skew + uncertainty))
+  Source:               ppu_blk/ppu_spr_blk/m_oam_FF_1851 (FF)
+  Destination:          ppu_blk/ppu_spr_blk/Mram_m_stm2_RAMC_D1 (RAM)
+  Requirement:          10.000
+  Data Path Delay:      11.769 (Levels of Logic = 3)
+  Clock Path Skew:      -0.495ns (0.687 - 1.182)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035
+
+  Clock Uncertainty:          0.035  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: ppu_blk/ppu_spr_blk/m_oam_FF_1851 to ppu_blk/ppu_spr_blk/Mram_m_stm2_RAMC_D1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X6Y48.DQ       Tcko                  0.408   ppu_blk/ppu_spr_blk/m_oam_ff_1851
+                                                       ppu_blk/ppu_spr_blk/m_oam_FF_1851
+    SLICE_X12Y21.B6      net (fanout=2)        3.487   ppu_blk/ppu_spr_blk/m_oam_ff_1851
+    SLICE_X12Y21.B       Tilo                  0.203   ppu_blk/ppu_spr_blk/m_oam_ff_1259
+                                                       ppu_blk/ppu_spr_blk/inst_LPM_MUX35_133
+    SLICE_X6Y15.B3       net (fanout=1)        4.026   ppu_blk/ppu_spr_blk/inst_LPM_MUX35_133
+    SLICE_X6Y15.B        Tilo                  0.205   ppu_blk/ppu_spr_blk/m_oam_ff_1611
+                                                       ppu_blk/ppu_spr_blk/inst_LPM_MUX35_8
+    SLICE_X11Y14.A1      net (fanout=1)        2.236   ppu_blk/ppu_spr_blk/inst_LPM_MUX35_8
+    SLICE_X11Y14.A       Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1738
+                                                       ppu_blk/ppu_spr_blk/nes_x_in<7>241
+    SLICE_X16Y15.CI      net (fanout=1)        0.901   ppu_blk/ppu_spr_blk/_n0568<27>
+    SLICE_X16Y15.CLK     Tds                   0.044   ppu_blk/ppu_spr_blk/_n0569<11>
+                                                       ppu_blk/ppu_spr_blk/Mram_m_stm2_RAMC_D1
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -2.001 (requirement - (data path - clock path skew + uncertainty))
+  Source:               ppu_blk/ppu_vga_blk/text_gen_unit/cur_y_reg_1 (FF)
+  Destination:          ppu_blk/ppu_vga_blk/text_gen_unit/cur_y_reg_2 (FF)
+  Requirement:          10.000
+  Data Path Delay:      11.499 (Levels of Logic = 2)
+  Clock Path Skew:      -0.467ns (0.652 - 1.119)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035
+
+  Clock Uncertainty:          0.035  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: ppu_blk/ppu_vga_blk/text_gen_unit/cur_y_reg_1 to ppu_blk/ppu_vga_blk/text_gen_unit/cur_y_reg_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X0Y26.CQ       Tcko                  0.447   ppu_blk/ppu_vga_blk/text_gen_unit/cur_y_reg<1>
+                                                       ppu_blk/ppu_vga_blk/text_gen_unit/cur_y_reg_1
+    SLICE_X3Y17.B5       net (fanout=14)       6.692   ppu_blk/ppu_vga_blk/text_gen_unit/cur_y_reg<1>
+    SLICE_X3Y17.B        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_915
+                                                       ppu_blk/ppu_vga_blk/text_gen_unit/data[6]_cur_y_reg[4]_AND_150_o1
+    SLICE_X4Y33.A3       net (fanout=8)        1.778   ppu_blk/ppu_vga_blk/text_gen_unit/data[6]_cur_y_reg[4]_AND_150_o
+    SLICE_X4Y33.A        Tilo                  0.203   ppu_blk/ppu_spr_blk/m_oam_ff_239
+                                                       ppu_blk/ppu_vga_blk/text_gen_unit/_n0194_inv3
+    SLICE_X9Y30.CE       net (fanout=3)        1.759   ppu_blk/ppu_vga_blk/text_gen_unit/_n0194_inv
+    SLICE_X9Y30.CLK      Tceck                 0.361   ppu_blk/ri_spr_ram_dout<7>
+                                                       ppu_blk/ppu_vga_blk/text_gen_unit/cur_y_reg_2
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -1.921 (requirement - (data path - clock path skew + uncertainty))
+  Source:               rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1 (FF)
+  Destination:          ppu_blk/ppu_spr_blk/m_oam_FF_1604 (FF)
+  Requirement:          10.000
+  Data Path Delay:      11.431 (Levels of Logic = 3)
+  Clock Path Skew:      -0.455ns (0.624 - 1.079)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035
+
+  Clock Uncertainty:          0.035  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1 to ppu_blk/ppu_spr_blk/m_oam_FF_1604
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y35.BQ      Tcko                  0.447   rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1
+                                                       rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1
+    SLICE_X11Y38.D3      net (fanout=16)       1.039   rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1
+    SLICE_X11Y38.D       Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_875
+                                                       Mmux_cpumc_a9_SW0
+    SLICE_X15Y36.D6      net (fanout=1)        0.800   N18
+    SLICE_X15Y36.D       Tilo                  0.259   ppu_blk/ppu_ri_blk/q_rd_rdy
+                                                       Mmux_cpumc_a9
+    SLICE_X9Y19.A2       net (fanout=319)      6.280   cpumc_a<2>
+    SLICE_X9Y19.A        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_371
+                                                       ppu_blk/ppu_spr_blk/oam_wr_in2001
+    SLICE_X18Y33.CE      net (fanout=2)        1.753   ppu_blk/ppu_spr_blk/oam_wr_in_200
+    SLICE_X18Y33.CLK     Tceck                 0.335   ppu_blk/ppu_spr_blk/m_oam_ff_1607
+                                                       ppu_blk/ppu_spr_blk/m_oam_FF_1604
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -1.902 (requirement - (data path - clock path skew + uncertainty))
+  Source:               rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd2 (FF)
+  Destination:          ppu_blk/ppu_spr_blk/m_oam_FF_1604 (FF)
+  Requirement:          10.000
+  Data Path Delay:      11.412 (Levels of Logic = 3)
+  Clock Path Skew:      -0.455ns (0.624 - 1.079)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035
+
+  Clock Uncertainty:          0.035  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd2 to ppu_blk/ppu_spr_blk/m_oam_FF_1604
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y35.BMUX    Tshcko                0.488   rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1
+                                                       rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd2
+    SLICE_X11Y38.D5      net (fanout=14)       0.979   rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd2
+    SLICE_X11Y38.D       Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_875
+                                                       Mmux_cpumc_a9_SW0
+    SLICE_X15Y36.D6      net (fanout=1)        0.800   N18
+    SLICE_X15Y36.D       Tilo                  0.259   ppu_blk/ppu_ri_blk/q_rd_rdy
+                                                       Mmux_cpumc_a9
+    SLICE_X9Y19.A2       net (fanout=319)      6.280   cpumc_a<2>
+    SLICE_X9Y19.A        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_371
+                                                       ppu_blk/ppu_spr_blk/oam_wr_in2001
+    SLICE_X18Y33.CE      net (fanout=2)        1.753   ppu_blk/ppu_spr_blk/oam_wr_in_200
+    SLICE_X18Y33.CLK     Tceck                 0.335   ppu_blk/ppu_spr_blk/m_oam_ff_1607
+                                                       ppu_blk/ppu_spr_blk/m_oam_FF_1604
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -1.901 (requirement - (data path - clock path skew + uncertainty))
+  Source:               rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1 (FF)
+  Destination:          ppu_blk/ppu_spr_blk/m_oam_FF_1607 (FF)
+  Requirement:          10.000
+  Data Path Delay:      11.411 (Levels of Logic = 3)
+  Clock Path Skew:      -0.455ns (0.624 - 1.079)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035
+
+  Clock Uncertainty:          0.035  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1 to ppu_blk/ppu_spr_blk/m_oam_FF_1607
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y35.BQ      Tcko                  0.447   rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1
+                                                       rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1
+    SLICE_X11Y38.D3      net (fanout=16)       1.039   rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1
+    SLICE_X11Y38.D       Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_875
+                                                       Mmux_cpumc_a9_SW0
+    SLICE_X15Y36.D6      net (fanout=1)        0.800   N18
+    SLICE_X15Y36.D       Tilo                  0.259   ppu_blk/ppu_ri_blk/q_rd_rdy
+                                                       Mmux_cpumc_a9
+    SLICE_X9Y19.A2       net (fanout=319)      6.280   cpumc_a<2>
+    SLICE_X9Y19.A        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_371
+                                                       ppu_blk/ppu_spr_blk/oam_wr_in2001
+    SLICE_X18Y33.CE      net (fanout=2)        1.753   ppu_blk/ppu_spr_blk/oam_wr_in_200
+    SLICE_X18Y33.CLK     Tceck                 0.315   ppu_blk/ppu_spr_blk/m_oam_ff_1607
+                                                       ppu_blk/ppu_spr_blk/m_oam_FF_1607
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -1.900 (requirement - (data path - clock path skew + uncertainty))
+  Source:               rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1 (FF)
+  Destination:          ppu_blk/ppu_spr_blk/m_oam_FF_1606 (FF)
+  Requirement:          10.000
+  Data Path Delay:      11.410 (Levels of Logic = 3)
+  Clock Path Skew:      -0.455ns (0.624 - 1.079)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035
+
+  Clock Uncertainty:          0.035  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1 to ppu_blk/ppu_spr_blk/m_oam_FF_1606
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y35.BQ      Tcko                  0.447   rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1
+                                                       rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1
+    SLICE_X11Y38.D3      net (fanout=16)       1.039   rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1
+    SLICE_X11Y38.D       Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_875
+                                                       Mmux_cpumc_a9_SW0
+    SLICE_X15Y36.D6      net (fanout=1)        0.800   N18
+    SLICE_X15Y36.D       Tilo                  0.259   ppu_blk/ppu_ri_blk/q_rd_rdy
+                                                       Mmux_cpumc_a9
+    SLICE_X9Y19.A2       net (fanout=319)      6.280   cpumc_a<2>
+    SLICE_X9Y19.A        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_371
+                                                       ppu_blk/ppu_spr_blk/oam_wr_in2001
+    SLICE_X18Y33.CE      net (fanout=2)        1.753   ppu_blk/ppu_spr_blk/oam_wr_in_200
+    SLICE_X18Y33.CLK     Tceck                 0.314   ppu_blk/ppu_spr_blk/m_oam_ff_1607
+                                                       ppu_blk/ppu_spr_blk/m_oam_FF_1606
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -1.882 (requirement - (data path - clock path skew + uncertainty))
+  Source:               rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd2 (FF)
+  Destination:          ppu_blk/ppu_spr_blk/m_oam_FF_1607 (FF)
+  Requirement:          10.000
+  Data Path Delay:      11.392 (Levels of Logic = 3)
+  Clock Path Skew:      -0.455ns (0.624 - 1.079)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035
+
+  Clock Uncertainty:          0.035  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd2 to ppu_blk/ppu_spr_blk/m_oam_FF_1607
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y35.BMUX    Tshcko                0.488   rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1
+                                                       rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd2
+    SLICE_X11Y38.D5      net (fanout=14)       0.979   rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd2
+    SLICE_X11Y38.D       Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_875
+                                                       Mmux_cpumc_a9_SW0
+    SLICE_X15Y36.D6      net (fanout=1)        0.800   N18
+    SLICE_X15Y36.D       Tilo                  0.259   ppu_blk/ppu_ri_blk/q_rd_rdy
+                                                       Mmux_cpumc_a9
+    SLICE_X9Y19.A2       net (fanout=319)      6.280   cpumc_a<2>
+    SLICE_X9Y19.A        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_371
+                                                       ppu_blk/ppu_spr_blk/oam_wr_in2001
+    SLICE_X18Y33.CE      net (fanout=2)        1.753   ppu_blk/ppu_spr_blk/oam_wr_in_200
+    SLICE_X18Y33.CLK     Tceck                 0.315   ppu_blk/ppu_spr_blk/m_oam_ff_1607
+                                                       ppu_blk/ppu_spr_blk/m_oam_FF_1607
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -1.882 (requirement - (data path - clock path skew + uncertainty))
+  Source:               rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1 (FF)
+  Destination:          ppu_blk/ppu_spr_blk/m_oam_FF_1605 (FF)
+  Requirement:          10.000
+  Data Path Delay:      11.392 (Levels of Logic = 3)
+  Clock Path Skew:      -0.455ns (0.624 - 1.079)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035
+
+  Clock Uncertainty:          0.035  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1 to ppu_blk/ppu_spr_blk/m_oam_FF_1605
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y35.BQ      Tcko                  0.447   rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1
+                                                       rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1
+    SLICE_X11Y38.D3      net (fanout=16)       1.039   rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1
+    SLICE_X11Y38.D       Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_875
+                                                       Mmux_cpumc_a9_SW0
+    SLICE_X15Y36.D6      net (fanout=1)        0.800   N18
+    SLICE_X15Y36.D       Tilo                  0.259   ppu_blk/ppu_ri_blk/q_rd_rdy
+                                                       Mmux_cpumc_a9
+    SLICE_X9Y19.A2       net (fanout=319)      6.280   cpumc_a<2>
+    SLICE_X9Y19.A        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_371
+                                                       ppu_blk/ppu_spr_blk/oam_wr_in2001
+    SLICE_X18Y33.CE      net (fanout=2)        1.753   ppu_blk/ppu_spr_blk/oam_wr_in_200
+    SLICE_X18Y33.CLK     Tceck                 0.296   ppu_blk/ppu_spr_blk/m_oam_ff_1607
+                                                       ppu_blk/ppu_spr_blk/m_oam_FF_1605
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -1.881 (requirement - (data path - clock path skew + uncertainty))
+  Source:               rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd2 (FF)
+  Destination:          ppu_blk/ppu_spr_blk/m_oam_FF_1606 (FF)
+  Requirement:          10.000
+  Data Path Delay:      11.391 (Levels of Logic = 3)
+  Clock Path Skew:      -0.455ns (0.624 - 1.079)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035
+
+  Clock Uncertainty:          0.035  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd2 to ppu_blk/ppu_spr_blk/m_oam_FF_1606
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X16Y35.BMUX    Tshcko                0.488   rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd1
+                                                       rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd2
+    SLICE_X11Y38.D5      net (fanout=14)       0.979   rp2a03_blk/sprdma_blk/q_cnt_FSM_FFd2
+    SLICE_X11Y38.D       Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_875
+                                                       Mmux_cpumc_a9_SW0
+    SLICE_X15Y36.D6      net (fanout=1)        0.800   N18
+    SLICE_X15Y36.D       Tilo                  0.259   ppu_blk/ppu_ri_blk/q_rd_rdy
+                                                       Mmux_cpumc_a9
+    SLICE_X9Y19.A2       net (fanout=319)      6.280   cpumc_a<2>
+    SLICE_X9Y19.A        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_371
+                                                       ppu_blk/ppu_spr_blk/oam_wr_in2001
+    SLICE_X18Y33.CE      net (fanout=2)        1.753   ppu_blk/ppu_spr_blk/oam_wr_in_200
+    SLICE_X18Y33.CLK     Tceck                 0.314   ppu_blk/ppu_spr_blk/m_oam_ff_1607
+                                                       ppu_blk/ppu_spr_blk/m_oam_FF_1606
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+

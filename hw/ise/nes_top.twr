@@ -1,0 +1,822 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Users\Stache\Documents\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe
+-filter
+C:/Users/Stache/Documents/Xilinx_Projects/spartan_mini/fpga_nes-master_tft2/hw/ise/iseconfig/filter.filter
+-intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml nes_top.twx nes_top.ncd -o
+nes_top.twr nes_top.pcf
+
+Design file:              nes_top.ncd
+Physical constraint file: nes_top.pcf
+Device,package,speed:     xc6slx9,tqg144,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 14230199 paths analyzed, 13307 endpoints analyzed, 6 failing endpoints
+ 6 timing errors detected. (6 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  10.177ns.
+--------------------------------------------------------------------------------
+
+Paths for end point sigma_delta_dac/SigmaLatch_7 (SLICE_X23Y6.C6), 687180 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.177ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 (FF)
+  Destination:          sigma_delta_dac/SigmaLatch_7 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      10.135ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.007ns (0.239 - 0.246)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 to sigma_delta_dac/SigmaLatch_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y6.AQ       Tcko                  0.391   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<6>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4
+    SLICE_X16Y7.D2       net (fanout=12)       0.905   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<4>
+    SLICE_X16Y7.CMUX     Topdc                 0.368   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_B<1>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>_F
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.C3       net (fanout=1)        0.552   rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.COUT     Topcyc                0.295   rp2a03_blk/apu_blk/apu_noise_blk/q_mode
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_lut<2>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.CIN      net (fanout=1)        0.003   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.COUT     Tbyp                  0.076   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CIN      net (fanout=1)        0.082   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CMUX     Tcinc                 0.272   rp2a03_blk/apu_blk/apu_pulse0_blk/envelope_generator/q_reg<4>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_xor<11>
+    SLICE_X14Y9.B6       net (fanout=2)        0.312   rp2a03_blk/apu_blk/apu_pulse1_blk/n0098<10>
+    SLICE_X14Y9.B        Tilo                  0.205   sigma_delta_dac/DACout
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_A21
+    SLICE_X12Y8.CX       net (fanout=1)        0.620   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_A<10>
+    SLICE_X12Y8.DMUX     Tcxd                  0.288   rp2a03_blk/apu_blk/apu_pulse0_blk/q_length_counter_halt
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_xor<11>
+    SLICE_X19Y6.C6       net (fanout=7)        0.596   rp2a03_blk/apu_blk/apu_pulse1_blk/sweep_target_period<11>
+    SLICE_X19Y6.C        Tilo                  0.259   BTN_SOUTH_IBUF_shift41
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<0>1
+    SLICE_X19Y8.D5       net (fanout=17)       0.491   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<0>
+    SLICE_X19Y8.D        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1987
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_cy<2>11
+    SLICE_X19Y5.B6       net (fanout=10)       0.535   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_cy<2>
+    SLICE_X19Y5.B        Tilo                  0.259   rp2a03_blk/apu_blk/apu_pulse0_blk/q_duty<1>
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_mixed_out_lut<2>
+    SLICE_X21Y8.A5       net (fanout=8)        0.945   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_mixed_out_lut<2>
+    SLICE_X21Y8.A        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1843
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>4_SW6
+    SLICE_X20Y5.A5       net (fanout=1)        0.592   N731
+    SLICE_X20Y5.A        Tilo                  0.203   rp2a03_blk/apu_blk/apu_noise_blk/q_length_counter_halt
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>4
+    SLICE_X20Y7.B6       net (fanout=2)        0.313   sigma_delta_dac/Maccum_SigmaLatch_lut<0>3
+    SLICE_X20Y7.B        Tilo                  0.203   sigma_delta_dac/SigmaLatch<4>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>11_SW0
+    SLICE_X23Y6.C6       net (fanout=7)        0.530   N592
+    SLICE_X23Y6.CLK      Tas                   0.322   sigma_delta_dac/SigmaLatch<9>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_xor<7>12
+                                                       sigma_delta_dac/SigmaLatch_7
+    -------------------------------------------------  ---------------------------
+    Total                                     10.135ns (3.659ns logic, 6.476ns route)
+                                                       (36.1% logic, 63.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.165ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 (FF)
+  Destination:          sigma_delta_dac/SigmaLatch_7 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      10.123ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.007ns (0.239 - 0.246)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 to sigma_delta_dac/SigmaLatch_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y6.AQ       Tcko                  0.391   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<6>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4
+    SLICE_X16Y7.D2       net (fanout=12)       0.905   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<4>
+    SLICE_X16Y7.CMUX     Topdc                 0.368   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_B<1>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>_F
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.C3       net (fanout=1)        0.552   rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.COUT     Topcyc                0.295   rp2a03_blk/apu_blk/apu_noise_blk/q_mode
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_lut<2>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.CIN      net (fanout=1)        0.003   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.COUT     Tbyp                  0.076   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CIN      net (fanout=1)        0.082   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CMUX     Tcinc                 0.272   rp2a03_blk/apu_blk/apu_pulse0_blk/envelope_generator/q_reg<4>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_xor<11>
+    SLICE_X14Y9.B6       net (fanout=2)        0.312   rp2a03_blk/apu_blk/apu_pulse1_blk/n0098<10>
+    SLICE_X14Y9.B        Tilo                  0.205   sigma_delta_dac/DACout
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_A21
+    SLICE_X12Y8.CX       net (fanout=1)        0.620   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_A<10>
+    SLICE_X12Y8.DMUX     Tcxd                  0.288   rp2a03_blk/apu_blk/apu_pulse0_blk/q_length_counter_halt
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_xor<11>
+    SLICE_X19Y6.C6       net (fanout=7)        0.596   rp2a03_blk/apu_blk/apu_pulse1_blk/sweep_target_period<11>
+    SLICE_X19Y6.C        Tilo                  0.259   BTN_SOUTH_IBUF_shift41
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<0>1
+    SLICE_X19Y8.D5       net (fanout=17)       0.491   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<0>
+    SLICE_X19Y8.D        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1987
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_cy<2>11
+    SLICE_X21Y8.C6       net (fanout=10)       0.530   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_cy<2>
+    SLICE_X21Y8.C        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1843
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>9_SW0_SW1
+    SLICE_X19Y5.C5       net (fanout=1)        0.648   N672
+    SLICE_X19Y5.C        Tilo                  0.259   rp2a03_blk/apu_blk/apu_pulse0_blk/q_duty<1>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>9_SW0
+    SLICE_X19Y7.D5       net (fanout=1)        0.399   N594
+    SLICE_X19Y7.D        Tilo                  0.259   rp2a03_blk/buttons/q_addr<7>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>9
+    SLICE_X20Y7.B3       net (fanout=2)        0.740   sigma_delta_dac/Maccum_SigmaLatch_lut<0>8
+    SLICE_X20Y7.B        Tilo                  0.203   sigma_delta_dac/SigmaLatch<4>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>11_SW0
+    SLICE_X23Y6.C6       net (fanout=7)        0.530   N592
+    SLICE_X23Y6.CLK      Tas                   0.322   sigma_delta_dac/SigmaLatch<9>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_xor<7>12
+                                                       sigma_delta_dac/SigmaLatch_7
+    -------------------------------------------------  ---------------------------
+    Total                                     10.123ns (3.715ns logic, 6.408ns route)
+                                                       (36.7% logic, 63.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.148ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 (FF)
+  Destination:          sigma_delta_dac/SigmaLatch_7 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      10.106ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.007ns (0.239 - 0.246)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 to sigma_delta_dac/SigmaLatch_7
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y6.AQ       Tcko                  0.391   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<6>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4
+    SLICE_X16Y7.D2       net (fanout=12)       0.905   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<4>
+    SLICE_X16Y7.CMUX     Topdc                 0.368   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_B<1>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>_F
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.C3       net (fanout=1)        0.552   rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.COUT     Topcyc                0.295   rp2a03_blk/apu_blk/apu_noise_blk/q_mode
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_lut<2>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.CIN      net (fanout=1)        0.003   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.COUT     Tbyp                  0.076   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CIN      net (fanout=1)        0.082   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CMUX     Tcinc                 0.272   rp2a03_blk/apu_blk/apu_pulse0_blk/envelope_generator/q_reg<4>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_xor<11>
+    SLICE_X14Y9.B6       net (fanout=2)        0.312   rp2a03_blk/apu_blk/apu_pulse1_blk/n0098<10>
+    SLICE_X14Y9.B        Tilo                  0.205   sigma_delta_dac/DACout
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_A21
+    SLICE_X12Y8.CX       net (fanout=1)        0.620   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_A<10>
+    SLICE_X12Y8.DMUX     Tcxd                  0.288   rp2a03_blk/apu_blk/apu_pulse0_blk/q_length_counter_halt
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_xor<11>
+    SLICE_X19Y8.B6       net (fanout=7)        0.778   rp2a03_blk/apu_blk/apu_pulse1_blk/sweep_target_period<11>
+    SLICE_X19Y8.B        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1987
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<3>1
+    SLICE_X19Y6.B5       net (fanout=14)       0.455   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<3>
+    SLICE_X19Y6.B        Tilo                  0.259   BTN_SOUTH_IBUF_shift41
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Mram_pulse_out131
+    SLICE_X19Y5.B5       net (fanout=3)        0.360   rp2a03_blk/apu_blk/apu_mixer_blk/Mram_pulse_out13
+    SLICE_X19Y5.B        Tilo                  0.259   rp2a03_blk/apu_blk/apu_pulse0_blk/q_duty<1>
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_mixed_out_lut<2>
+    SLICE_X21Y8.A5       net (fanout=8)        0.945   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_mixed_out_lut<2>
+    SLICE_X21Y8.A        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1843
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>4_SW6
+    SLICE_X20Y5.A5       net (fanout=1)        0.592   N731
+    SLICE_X20Y5.A        Tilo                  0.203   rp2a03_blk/apu_blk/apu_noise_blk/q_length_counter_halt
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>4
+    SLICE_X20Y7.B6       net (fanout=2)        0.313   sigma_delta_dac/Maccum_SigmaLatch_lut<0>3
+    SLICE_X20Y7.B        Tilo                  0.203   sigma_delta_dac/SigmaLatch<4>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>11_SW0
+    SLICE_X23Y6.C6       net (fanout=7)        0.530   N592
+    SLICE_X23Y6.CLK      Tas                   0.322   sigma_delta_dac/SigmaLatch<9>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_xor<7>12
+                                                       sigma_delta_dac/SigmaLatch_7
+    -------------------------------------------------  ---------------------------
+    Total                                     10.106ns (3.659ns logic, 6.447ns route)
+                                                       (36.2% logic, 63.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sigma_delta_dac/SigmaLatch_9 (SLICE_X23Y6.D4), 687180 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.127ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 (FF)
+  Destination:          sigma_delta_dac/SigmaLatch_9 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      10.085ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.007ns (0.239 - 0.246)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 to sigma_delta_dac/SigmaLatch_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y6.AQ       Tcko                  0.391   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<6>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4
+    SLICE_X16Y7.D2       net (fanout=12)       0.905   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<4>
+    SLICE_X16Y7.CMUX     Topdc                 0.368   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_B<1>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>_F
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.C3       net (fanout=1)        0.552   rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.COUT     Topcyc                0.295   rp2a03_blk/apu_blk/apu_noise_blk/q_mode
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_lut<2>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.CIN      net (fanout=1)        0.003   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.COUT     Tbyp                  0.076   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CIN      net (fanout=1)        0.082   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CMUX     Tcinc                 0.272   rp2a03_blk/apu_blk/apu_pulse0_blk/envelope_generator/q_reg<4>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_xor<11>
+    SLICE_X14Y9.B6       net (fanout=2)        0.312   rp2a03_blk/apu_blk/apu_pulse1_blk/n0098<10>
+    SLICE_X14Y9.B        Tilo                  0.205   sigma_delta_dac/DACout
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_A21
+    SLICE_X12Y8.CX       net (fanout=1)        0.620   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_A<10>
+    SLICE_X12Y8.DMUX     Tcxd                  0.288   rp2a03_blk/apu_blk/apu_pulse0_blk/q_length_counter_halt
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_xor<11>
+    SLICE_X19Y6.C6       net (fanout=7)        0.596   rp2a03_blk/apu_blk/apu_pulse1_blk/sweep_target_period<11>
+    SLICE_X19Y6.C        Tilo                  0.259   BTN_SOUTH_IBUF_shift41
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<0>1
+    SLICE_X19Y8.D5       net (fanout=17)       0.491   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<0>
+    SLICE_X19Y8.D        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1987
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_cy<2>11
+    SLICE_X19Y5.B6       net (fanout=10)       0.535   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_cy<2>
+    SLICE_X19Y5.B        Tilo                  0.259   rp2a03_blk/apu_blk/apu_pulse0_blk/q_duty<1>
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_mixed_out_lut<2>
+    SLICE_X21Y8.A5       net (fanout=8)        0.945   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_mixed_out_lut<2>
+    SLICE_X21Y8.A        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1843
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>4_SW6
+    SLICE_X20Y5.A5       net (fanout=1)        0.592   N731
+    SLICE_X20Y5.A        Tilo                  0.203   rp2a03_blk/apu_blk/apu_noise_blk/q_length_counter_halt
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>4
+    SLICE_X20Y7.B6       net (fanout=2)        0.313   sigma_delta_dac/Maccum_SigmaLatch_lut<0>3
+    SLICE_X20Y7.B        Tilo                  0.203   sigma_delta_dac/SigmaLatch<4>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>11_SW0
+    SLICE_X23Y6.D4       net (fanout=7)        0.480   N592
+    SLICE_X23Y6.CLK      Tas                   0.322   sigma_delta_dac/SigmaLatch<9>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_cy<8>11
+                                                       sigma_delta_dac/SigmaLatch_9
+    -------------------------------------------------  ---------------------------
+    Total                                     10.085ns (3.659ns logic, 6.426ns route)
+                                                       (36.3% logic, 63.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.115ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 (FF)
+  Destination:          sigma_delta_dac/SigmaLatch_9 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      10.073ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.007ns (0.239 - 0.246)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 to sigma_delta_dac/SigmaLatch_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y6.AQ       Tcko                  0.391   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<6>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4
+    SLICE_X16Y7.D2       net (fanout=12)       0.905   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<4>
+    SLICE_X16Y7.CMUX     Topdc                 0.368   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_B<1>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>_F
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.C3       net (fanout=1)        0.552   rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.COUT     Topcyc                0.295   rp2a03_blk/apu_blk/apu_noise_blk/q_mode
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_lut<2>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.CIN      net (fanout=1)        0.003   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.COUT     Tbyp                  0.076   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CIN      net (fanout=1)        0.082   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CMUX     Tcinc                 0.272   rp2a03_blk/apu_blk/apu_pulse0_blk/envelope_generator/q_reg<4>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_xor<11>
+    SLICE_X14Y9.B6       net (fanout=2)        0.312   rp2a03_blk/apu_blk/apu_pulse1_blk/n0098<10>
+    SLICE_X14Y9.B        Tilo                  0.205   sigma_delta_dac/DACout
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_A21
+    SLICE_X12Y8.CX       net (fanout=1)        0.620   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_A<10>
+    SLICE_X12Y8.DMUX     Tcxd                  0.288   rp2a03_blk/apu_blk/apu_pulse0_blk/q_length_counter_halt
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_xor<11>
+    SLICE_X19Y6.C6       net (fanout=7)        0.596   rp2a03_blk/apu_blk/apu_pulse1_blk/sweep_target_period<11>
+    SLICE_X19Y6.C        Tilo                  0.259   BTN_SOUTH_IBUF_shift41
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<0>1
+    SLICE_X19Y8.D5       net (fanout=17)       0.491   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<0>
+    SLICE_X19Y8.D        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1987
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_cy<2>11
+    SLICE_X21Y8.C6       net (fanout=10)       0.530   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_cy<2>
+    SLICE_X21Y8.C        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1843
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>9_SW0_SW1
+    SLICE_X19Y5.C5       net (fanout=1)        0.648   N672
+    SLICE_X19Y5.C        Tilo                  0.259   rp2a03_blk/apu_blk/apu_pulse0_blk/q_duty<1>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>9_SW0
+    SLICE_X19Y7.D5       net (fanout=1)        0.399   N594
+    SLICE_X19Y7.D        Tilo                  0.259   rp2a03_blk/buttons/q_addr<7>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>9
+    SLICE_X20Y7.B3       net (fanout=2)        0.740   sigma_delta_dac/Maccum_SigmaLatch_lut<0>8
+    SLICE_X20Y7.B        Tilo                  0.203   sigma_delta_dac/SigmaLatch<4>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>11_SW0
+    SLICE_X23Y6.D4       net (fanout=7)        0.480   N592
+    SLICE_X23Y6.CLK      Tas                   0.322   sigma_delta_dac/SigmaLatch<9>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_cy<8>11
+                                                       sigma_delta_dac/SigmaLatch_9
+    -------------------------------------------------  ---------------------------
+    Total                                     10.073ns (3.715ns logic, 6.358ns route)
+                                                       (36.9% logic, 63.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.098ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 (FF)
+  Destination:          sigma_delta_dac/SigmaLatch_9 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      10.056ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.007ns (0.239 - 0.246)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 to sigma_delta_dac/SigmaLatch_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y6.AQ       Tcko                  0.391   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<6>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4
+    SLICE_X16Y7.D2       net (fanout=12)       0.905   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<4>
+    SLICE_X16Y7.CMUX     Topdc                 0.368   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_B<1>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>_F
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.C3       net (fanout=1)        0.552   rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.COUT     Topcyc                0.295   rp2a03_blk/apu_blk/apu_noise_blk/q_mode
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_lut<2>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.CIN      net (fanout=1)        0.003   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.COUT     Tbyp                  0.076   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CIN      net (fanout=1)        0.082   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CMUX     Tcinc                 0.272   rp2a03_blk/apu_blk/apu_pulse0_blk/envelope_generator/q_reg<4>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_xor<11>
+    SLICE_X14Y9.B6       net (fanout=2)        0.312   rp2a03_blk/apu_blk/apu_pulse1_blk/n0098<10>
+    SLICE_X14Y9.B        Tilo                  0.205   sigma_delta_dac/DACout
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_A21
+    SLICE_X12Y8.CX       net (fanout=1)        0.620   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_A<10>
+    SLICE_X12Y8.DMUX     Tcxd                  0.288   rp2a03_blk/apu_blk/apu_pulse0_blk/q_length_counter_halt
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_xor<11>
+    SLICE_X19Y8.B6       net (fanout=7)        0.778   rp2a03_blk/apu_blk/apu_pulse1_blk/sweep_target_period<11>
+    SLICE_X19Y8.B        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1987
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<3>1
+    SLICE_X19Y6.B5       net (fanout=14)       0.455   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<3>
+    SLICE_X19Y6.B        Tilo                  0.259   BTN_SOUTH_IBUF_shift41
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Mram_pulse_out131
+    SLICE_X19Y5.B5       net (fanout=3)        0.360   rp2a03_blk/apu_blk/apu_mixer_blk/Mram_pulse_out13
+    SLICE_X19Y5.B        Tilo                  0.259   rp2a03_blk/apu_blk/apu_pulse0_blk/q_duty<1>
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_mixed_out_lut<2>
+    SLICE_X21Y8.A5       net (fanout=8)        0.945   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_mixed_out_lut<2>
+    SLICE_X21Y8.A        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1843
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>4_SW6
+    SLICE_X20Y5.A5       net (fanout=1)        0.592   N731
+    SLICE_X20Y5.A        Tilo                  0.203   rp2a03_blk/apu_blk/apu_noise_blk/q_length_counter_halt
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>4
+    SLICE_X20Y7.B6       net (fanout=2)        0.313   sigma_delta_dac/Maccum_SigmaLatch_lut<0>3
+    SLICE_X20Y7.B        Tilo                  0.203   sigma_delta_dac/SigmaLatch<4>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>11_SW0
+    SLICE_X23Y6.D4       net (fanout=7)        0.480   N592
+    SLICE_X23Y6.CLK      Tas                   0.322   sigma_delta_dac/SigmaLatch<9>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_cy<8>11
+                                                       sigma_delta_dac/SigmaLatch_9
+    -------------------------------------------------  ---------------------------
+    Total                                     10.056ns (3.659ns logic, 6.397ns route)
+                                                       (36.4% logic, 63.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point sigma_delta_dac/SigmaLatch_4 (SLICE_X20Y7.D1), 687180 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.119ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 (FF)
+  Destination:          sigma_delta_dac/SigmaLatch_4 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      10.074ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.010ns (0.236 - 0.246)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 to sigma_delta_dac/SigmaLatch_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y6.AQ       Tcko                  0.391   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<6>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4
+    SLICE_X16Y7.D2       net (fanout=12)       0.905   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<4>
+    SLICE_X16Y7.CMUX     Topdc                 0.368   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_B<1>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>_F
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.C3       net (fanout=1)        0.552   rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.COUT     Topcyc                0.295   rp2a03_blk/apu_blk/apu_noise_blk/q_mode
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_lut<2>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.CIN      net (fanout=1)        0.003   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.COUT     Tbyp                  0.076   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CIN      net (fanout=1)        0.082   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CMUX     Tcinc                 0.272   rp2a03_blk/apu_blk/apu_pulse0_blk/envelope_generator/q_reg<4>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_xor<11>
+    SLICE_X14Y9.B6       net (fanout=2)        0.312   rp2a03_blk/apu_blk/apu_pulse1_blk/n0098<10>
+    SLICE_X14Y9.B        Tilo                  0.205   sigma_delta_dac/DACout
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_A21
+    SLICE_X12Y8.CX       net (fanout=1)        0.620   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_A<10>
+    SLICE_X12Y8.DMUX     Tcxd                  0.288   rp2a03_blk/apu_blk/apu_pulse0_blk/q_length_counter_halt
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_xor<11>
+    SLICE_X19Y6.C6       net (fanout=7)        0.596   rp2a03_blk/apu_blk/apu_pulse1_blk/sweep_target_period<11>
+    SLICE_X19Y6.C        Tilo                  0.259   BTN_SOUTH_IBUF_shift41
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<0>1
+    SLICE_X19Y8.D5       net (fanout=17)       0.491   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<0>
+    SLICE_X19Y8.D        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1987
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_cy<2>11
+    SLICE_X19Y5.B6       net (fanout=10)       0.535   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_cy<2>
+    SLICE_X19Y5.B        Tilo                  0.259   rp2a03_blk/apu_blk/apu_pulse0_blk/q_duty<1>
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_mixed_out_lut<2>
+    SLICE_X21Y8.A5       net (fanout=8)        0.945   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_mixed_out_lut<2>
+    SLICE_X21Y8.A        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1843
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>4_SW6
+    SLICE_X20Y5.A5       net (fanout=1)        0.592   N731
+    SLICE_X20Y5.A        Tilo                  0.203   rp2a03_blk/apu_blk/apu_noise_blk/q_length_counter_halt
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>4
+    SLICE_X20Y7.B6       net (fanout=2)        0.313   sigma_delta_dac/Maccum_SigmaLatch_lut<0>3
+    SLICE_X20Y7.B        Tilo                  0.203   sigma_delta_dac/SigmaLatch<4>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>11_SW0
+    SLICE_X20Y7.D1       net (fanout=7)        0.502   N592
+    SLICE_X20Y7.CLK      Tas                   0.289   sigma_delta_dac/SigmaLatch<4>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_xor<4>11
+                                                       sigma_delta_dac/SigmaLatch_4
+    -------------------------------------------------  ---------------------------
+    Total                                     10.074ns (3.626ns logic, 6.448ns route)
+                                                       (36.0% logic, 64.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.107ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 (FF)
+  Destination:          sigma_delta_dac/SigmaLatch_4 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      10.062ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.010ns (0.236 - 0.246)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 to sigma_delta_dac/SigmaLatch_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y6.AQ       Tcko                  0.391   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<6>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4
+    SLICE_X16Y7.D2       net (fanout=12)       0.905   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<4>
+    SLICE_X16Y7.CMUX     Topdc                 0.368   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_B<1>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>_F
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.C3       net (fanout=1)        0.552   rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.COUT     Topcyc                0.295   rp2a03_blk/apu_blk/apu_noise_blk/q_mode
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_lut<2>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.CIN      net (fanout=1)        0.003   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.COUT     Tbyp                  0.076   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CIN      net (fanout=1)        0.082   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CMUX     Tcinc                 0.272   rp2a03_blk/apu_blk/apu_pulse0_blk/envelope_generator/q_reg<4>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_xor<11>
+    SLICE_X14Y9.B6       net (fanout=2)        0.312   rp2a03_blk/apu_blk/apu_pulse1_blk/n0098<10>
+    SLICE_X14Y9.B        Tilo                  0.205   sigma_delta_dac/DACout
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_A21
+    SLICE_X12Y8.CX       net (fanout=1)        0.620   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_A<10>
+    SLICE_X12Y8.DMUX     Tcxd                  0.288   rp2a03_blk/apu_blk/apu_pulse0_blk/q_length_counter_halt
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_xor<11>
+    SLICE_X19Y6.C6       net (fanout=7)        0.596   rp2a03_blk/apu_blk/apu_pulse1_blk/sweep_target_period<11>
+    SLICE_X19Y6.C        Tilo                  0.259   BTN_SOUTH_IBUF_shift41
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<0>1
+    SLICE_X19Y8.D5       net (fanout=17)       0.491   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<0>
+    SLICE_X19Y8.D        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1987
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_cy<2>11
+    SLICE_X21Y8.C6       net (fanout=10)       0.530   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_cy<2>
+    SLICE_X21Y8.C        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1843
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>9_SW0_SW1
+    SLICE_X19Y5.C5       net (fanout=1)        0.648   N672
+    SLICE_X19Y5.C        Tilo                  0.259   rp2a03_blk/apu_blk/apu_pulse0_blk/q_duty<1>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>9_SW0
+    SLICE_X19Y7.D5       net (fanout=1)        0.399   N594
+    SLICE_X19Y7.D        Tilo                  0.259   rp2a03_blk/buttons/q_addr<7>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>9
+    SLICE_X20Y7.B3       net (fanout=2)        0.740   sigma_delta_dac/Maccum_SigmaLatch_lut<0>8
+    SLICE_X20Y7.B        Tilo                  0.203   sigma_delta_dac/SigmaLatch<4>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>11_SW0
+    SLICE_X20Y7.D1       net (fanout=7)        0.502   N592
+    SLICE_X20Y7.CLK      Tas                   0.289   sigma_delta_dac/SigmaLatch<4>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_xor<4>11
+                                                       sigma_delta_dac/SigmaLatch_4
+    -------------------------------------------------  ---------------------------
+    Total                                     10.062ns (3.682ns logic, 6.380ns route)
+                                                       (36.6% logic, 63.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.090ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 (FF)
+  Destination:          sigma_delta_dac/SigmaLatch_4 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      10.045ns (Levels of Logic = 13)
+  Clock Path Skew:      -0.010ns (0.236 - 0.246)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4 to sigma_delta_dac/SigmaLatch_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y6.AQ       Tcko                  0.391   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<6>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period_4
+    SLICE_X16Y7.D2       net (fanout=12)       0.905   rp2a03_blk/apu_blk/apu_pulse1_blk/q_timer_period<4>
+    SLICE_X16Y7.CMUX     Topdc                 0.368   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_B<1>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>_F
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.C3       net (fanout=1)        0.552   rp2a03_blk/apu_blk/apu_pulse1_blk/n0096<2>
+    SLICE_X14Y6.COUT     Topcyc                0.295   rp2a03_blk/apu_blk/apu_noise_blk/q_mode
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_lut<2>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.CIN      net (fanout=1)        0.003   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<3>
+    SLICE_X14Y7.COUT     Tbyp                  0.076   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CIN      net (fanout=1)        0.082   rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_cy<7>
+    SLICE_X14Y8.CMUX     Tcinc                 0.272   rp2a03_blk/apu_blk/apu_pulse0_blk/envelope_generator/q_reg<4>
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Madd_n0098_xor<11>
+    SLICE_X14Y9.B6       net (fanout=2)        0.312   rp2a03_blk/apu_blk/apu_pulse1_blk/n0098<10>
+    SLICE_X14Y9.B        Tilo                  0.205   sigma_delta_dac/DACout
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_A21
+    SLICE_X12Y8.CX       net (fanout=1)        0.620   rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_A<10>
+    SLICE_X12Y8.DMUX     Tcxd                  0.288   rp2a03_blk/apu_blk/apu_pulse0_blk/q_length_counter_halt
+                                                       rp2a03_blk/apu_blk/apu_pulse1_blk/Mmux_sweep_target_period_rs_xor<11>
+    SLICE_X19Y8.B6       net (fanout=7)        0.778   rp2a03_blk/apu_blk/apu_pulse1_blk/sweep_target_period<11>
+    SLICE_X19Y8.B        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1987
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<3>1
+    SLICE_X19Y6.B5       net (fanout=14)       0.455   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_n0037_lut<3>
+    SLICE_X19Y6.B        Tilo                  0.259   BTN_SOUTH_IBUF_shift41
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Mram_pulse_out131
+    SLICE_X19Y5.B5       net (fanout=3)        0.360   rp2a03_blk/apu_blk/apu_mixer_blk/Mram_pulse_out13
+    SLICE_X19Y5.B        Tilo                  0.259   rp2a03_blk/apu_blk/apu_pulse0_blk/q_duty<1>
+                                                       rp2a03_blk/apu_blk/apu_mixer_blk/Madd_mixed_out_lut<2>
+    SLICE_X21Y8.A5       net (fanout=8)        0.945   rp2a03_blk/apu_blk/apu_mixer_blk/Madd_mixed_out_lut<2>
+    SLICE_X21Y8.A        Tilo                  0.259   ppu_blk/ppu_spr_blk/m_oam_ff_1843
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>4_SW6
+    SLICE_X20Y5.A5       net (fanout=1)        0.592   N731
+    SLICE_X20Y5.A        Tilo                  0.203   rp2a03_blk/apu_blk/apu_noise_blk/q_length_counter_halt
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>4
+    SLICE_X20Y7.B6       net (fanout=2)        0.313   sigma_delta_dac/Maccum_SigmaLatch_lut<0>3
+    SLICE_X20Y7.B        Tilo                  0.203   sigma_delta_dac/SigmaLatch<4>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_lut<0>11_SW0
+    SLICE_X20Y7.D1       net (fanout=7)        0.502   N592
+    SLICE_X20Y7.CLK      Tas                   0.289   sigma_delta_dac/SigmaLatch<4>
+                                                       sigma_delta_dac/Maccum_SigmaLatch_xor<4>11
+                                                       sigma_delta_dac/SigmaLatch_4
+    -------------------------------------------------  ---------------------------
+    Total                                     10.045ns (3.626ns logic, 6.419ns route)
+                                                       (36.1% logic, 63.9% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point ppu_blk/ppu_vga_blk/text_gen_unit/video_ram/Mram_ram1 (RAMB16_X0Y6.DIA0), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.316ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ppu_blk/ppu_vga_blk/uart_receiver/RxD_data_0 (FF)
+  Destination:          ppu_blk/ppu_vga_blk/text_gen_unit/video_ram/Mram_ram1 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.319ns (Levels of Logic = 0)
+  Clock Path Skew:      0.003ns (0.119 - 0.116)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 10.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: ppu_blk/ppu_vga_blk/uart_receiver/RxD_data_0 to ppu_blk/ppu_vga_blk/text_gen_unit/video_ram/Mram_ram1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y13.AQ       Tcko                  0.200   ppu_blk/ppu_vga_blk/uart_receiver/RxD_data<3>
+                                                       ppu_blk/ppu_vga_blk/uart_receiver/RxD_data_0
+    RAMB16_X0Y6.DIA0     net (fanout=4)        0.172   ppu_blk/ppu_vga_blk/uart_receiver/RxD_data<0>
+    RAMB16_X0Y6.CLKA     Trckd_DIA   (-Th)     0.053   ppu_blk/ppu_vga_blk/text_gen_unit/video_ram/Mram_ram1
+                                                       ppu_blk/ppu_vga_blk/text_gen_unit/video_ram/Mram_ram1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.319ns (0.147ns logic, 0.172ns route)
+                                                       (46.1% logic, 53.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ppu_blk/ppu_spr_blk/Mram_m_stm3_RAMA (SLICE_X8Y48.D1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.328ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ppu_blk/ppu_spr_blk/q_in_rng_cnt_0 (FF)
+  Destination:          ppu_blk/ppu_spr_blk/Mram_m_stm3_RAMA (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.398ns (Levels of Logic = 0)
+  Clock Path Skew:      0.070ns (0.395 - 0.325)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 10.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: ppu_blk/ppu_spr_blk/q_in_rng_cnt_0 to ppu_blk/ppu_spr_blk/Mram_m_stm3_RAMA
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y47.AMUX    Tshcko                0.244   ppu_blk/ppu_spr_blk/q_in_rng_cnt<3>
+                                                       ppu_blk/ppu_spr_blk/q_in_rng_cnt_0
+    SLICE_X8Y48.D1       net (fanout=10)       0.447   ppu_blk/ppu_spr_blk/q_in_rng_cnt<0>
+    SLICE_X8Y48.CLK      Tah         (-Th)     0.293   ppu_blk/spr_vram_a<5>
+                                                       ppu_blk/ppu_spr_blk/Mram_m_stm3_RAMA
+    -------------------------------------------------  ---------------------------
+    Total                                      0.398ns (-0.049ns logic, 0.447ns route)
+                                                       (-12.3% logic, 112.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point ppu_blk/ppu_spr_blk/Mram_m_stm3_RAMA_D1 (SLICE_X8Y48.D1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.328ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               ppu_blk/ppu_spr_blk/q_in_rng_cnt_0 (FF)
+  Destination:          ppu_blk/ppu_spr_blk/Mram_m_stm3_RAMA_D1 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.398ns (Levels of Logic = 0)
+  Clock Path Skew:      0.070ns (0.395 - 0.325)
+  Source Clock:         CLK_100MHZ_BUFGP rising at 10.000ns
+  Destination Clock:    CLK_100MHZ_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: ppu_blk/ppu_spr_blk/q_in_rng_cnt_0 to ppu_blk/ppu_spr_blk/Mram_m_stm3_RAMA_D1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X11Y47.AMUX    Tshcko                0.244   ppu_blk/ppu_spr_blk/q_in_rng_cnt<3>
+                                                       ppu_blk/ppu_spr_blk/q_in_rng_cnt_0
+    SLICE_X8Y48.D1       net (fanout=10)       0.447   ppu_blk/ppu_spr_blk/q_in_rng_cnt<0>
+    SLICE_X8Y48.CLK      Tah         (-Th)     0.293   ppu_blk/spr_vram_a<5>
+                                                       ppu_blk/ppu_spr_blk/Mram_m_stm3_RAMA_D1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.398ns (-0.049ns logic, 0.447ns route)
+                                                       (-12.3% logic, 112.3% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 6.876ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: cart_blk/chrrom_pat_bram/Mram_ram1/CLKA
+  Logical resource: cart_blk/chrrom_pat_bram/Mram_ram1/CLKA
+  Location pin: RAMB16_X0Y22.CLKA
+  Clock network: CLK_100MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 6.876ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: cart_blk/chrrom_pat_bram/Mram_ram2/CLKA
+  Logical resource: cart_blk/chrrom_pat_bram/Mram_ram2/CLKA
+  Location pin: RAMB16_X0Y30.CLKA
+  Clock network: CLK_100MHZ_BUFGP
+--------------------------------------------------------------------------------
+Slack: 6.876ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 3.124ns (320.102MHz) (Trper_CLKA(Fmax))
+  Physical resource: cart_blk/chrrom_pat_bram/Mram_ram3/CLKA
+  Logical resource: cart_blk/chrrom_pat_bram/Mram_ram3/CLKA
+  Location pin: RAMB16_X0Y28.CLKA
+  Clock network: CLK_100MHZ_BUFGP
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock CLK_100MHZ
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100MHZ     |   10.177|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 6  Score: 618  (Setup/Max: 618, Hold: 0)
+
+Constraints cover 14230199 paths, 0 nets, and 29048 connections
+
+Design statistics:
+   Minimum period:  10.177ns{1}   (Maximum frequency:  98.261MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Fri Mar 16 20:33:49 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 346 MB
+
+
+

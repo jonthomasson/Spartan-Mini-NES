@@ -1,0 +1,2627 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.35 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.35 secs
+ 
+--> Reading design: nes_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "nes_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "nes_top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : nes_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_div.v" into library work
+Parsing module <apu_div>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\font_rom.v" into library work
+Parsing module <font_rom>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\dual_port_ram_sync.v" into library work
+Parsing module <xilinx_dual_port_ram_sync>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_length_counter.v" into library work
+Parsing module <apu_length_counter>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_envelope_generator.v" into library work
+Parsing module <apu_envelope_generator>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\video_sync.v" into library work
+Parsing module <video_sync>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\text_menu_gen.v" into library work
+Parsing module <text_menu_gen>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_triangle.v" into library work
+Parsing module <apu_triangle>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_pulse.v" into library work
+Parsing module <apu_pulse>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_noise.v" into library work
+Parsing module <apu_noise>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_mixer.v" into library work
+Parsing module <apu_mixer>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_frame_counter.v" into library work
+Parsing module <apu_frame_counter>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\vga_sync\vga_sync.v" into library work
+Parsing module <vga_sync>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\async.v" into library work
+Parsing module <async_transmitter>.
+Parsing module <async_receiver>.
+Parsing module <ASSERTION_ERROR>.
+Parsing module <BaudTickGen>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\debounce.v" into library work
+Parsing module <debounce>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\ppu\ppu_vga.v" into library work
+Parsing module <ppu_vga>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\ppu\ppu_spr.v" into library work
+Parsing module <ppu_spr>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\ppu\ppu_ri.v" into library work
+Parsing module <ppu_ri>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\ppu\ppu_bg.v" into library work
+Parsing module <ppu_bg>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\sprdma.v" into library work
+Parsing module <sprdma>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\cpu.v" into library work
+Parsing module <cpu>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu.v" into library work
+Parsing module <apu>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\uart\uart.v" into library work
+Parsing verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\uart\/uart_baud_clk.v" included at line 29.
+Parsing module <uart_baud_clk>.
+Parsing verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\uart\/uart_rx.v" included at line 30.
+Parsing module <uart_rx>.
+Parsing verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\uart\/uart_tx.v" included at line 31.
+Parsing module <uart_tx>.
+Parsing verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\vga_sync\/../fifo/fifo.v" included at line 33.
+Parsing module <fifo>.
+Parsing module <uart>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\block_ram\block_ram.v" into library work
+Parsing module <dual_port_ram_sync>.
+Parsing module <single_port_ram_sync>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\joypad_buttons.v" into library work
+Parsing module <joypad_buttons>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\wram.v" into library work
+Parsing module <wram>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\vram.v" into library work
+Parsing module <vram>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\ppu\ppu.v" into library work
+Parsing module <ppu>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\hci\hci.v" into library work
+Parsing module <hci>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\rp2a03.v" into library work
+Parsing module <rp2a03>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cart\cart.v" into library work
+Parsing module <cart>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\sigma_delta_dac.v" into library work
+Parsing module <sigma_delta_dac>.
+Analyzing Verilog file "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\nes_top.v" into library work
+Parsing module <nes_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <nes_top>.
+
+Elaborating module <rp2a03>.
+
+Elaborating module <cpu>.
+
+Elaborating module <apu>.
+
+Elaborating module <apu_div(PERIOD_BITS=1)>.
+
+Elaborating module <apu_frame_counter>.
+WARNING:HDLCompiler:1127 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu.v" Line 116: Assignment to f_pulse ignored, since the identifier is never used
+
+Elaborating module <apu_pulse(CHANNEL=0)>.
+
+Elaborating module <apu_envelope_generator>.
+
+Elaborating module <apu_div(PERIOD_BITS=4)>.
+
+Elaborating module <apu_div(PERIOD_BITS=12)>.
+
+Elaborating module <apu_div(PERIOD_BITS=3)>.
+
+Elaborating module <apu_length_counter>.
+
+Elaborating module <apu_pulse(CHANNEL=1)>.
+
+Elaborating module <apu_triangle>.
+
+Elaborating module <apu_div(PERIOD_BITS=11)>.
+
+Elaborating module <apu_noise>.
+
+Elaborating module <apu_mixer>.
+
+Elaborating module <joypad_buttons>.
+
+Elaborating module <debounce(N=21)>.
+WARNING:HDLCompiler:413 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\debounce.v" Line 65: Result of 32-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\debounce.v" Line 92: Result of 32-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:552 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\joypad_buttons.v" Line 53: Input port reset is not connected on this instance
+WARNING:HDLCompiler:552 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\joypad_buttons.v" Line 57: Input port reset is not connected on this instance
+WARNING:HDLCompiler:552 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\joypad_buttons.v" Line 61: Input port reset is not connected on this instance
+WARNING:HDLCompiler:552 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\joypad_buttons.v" Line 65: Input port reset is not connected on this instance
+WARNING:HDLCompiler:552 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\joypad_buttons.v" Line 69: Input port reset is not connected on this instance
+WARNING:HDLCompiler:552 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\joypad_buttons.v" Line 73: Input port reset is not connected on this instance
+WARNING:HDLCompiler:552 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\joypad_buttons.v" Line 77: Input port reset is not connected on this instance
+WARNING:HDLCompiler:552 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\joypad_buttons.v" Line 81: Input port reset is not connected on this instance
+WARNING:HDLCompiler:1127 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\rp2a03.v" Line 130: Assignment to joypad_level ignored, since the identifier is never used
+
+Elaborating module <sprdma>.
+
+Elaborating module <sigma_delta_dac>.
+WARNING:HDLCompiler:189 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\nes_top.v" Line 114: Size mismatch in connection of port <DACin>. Formal port size is 8-bit while actual signal size is 1-bit.
+
+Elaborating module <debounce>.
+WARNING:HDLCompiler:413 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\debounce.v" Line 65: Result of 32-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\debounce.v" Line 92: Result of 32-bit expression is truncated to fit in 21-bit target.
+
+Elaborating module <cart>.
+
+Elaborating module <single_port_ram_sync(ADDR_WIDTH=15,DATA_WIDTH=8)>.
+
+Elaborating module <single_port_ram_sync(ADDR_WIDTH=13,DATA_WIDTH=8)>.
+
+Elaborating module <wram>.
+
+Elaborating module <single_port_ram_sync(ADDR_WIDTH=11,DATA_WIDTH=8)>.
+
+Elaborating module <vram>.
+
+Elaborating module <ppu>.
+WARNING:HDLCompiler:1016 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\ppu\ppu_vga.v" Line 234: Port RxD_idle is not connected to this instance
+
+Elaborating module <ppu_vga>.
+
+Elaborating module <vga_sync>.
+WARNING:HDLCompiler:413 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\vga_sync\vga_sync.v" Line 105: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\vga_sync\vga_sync.v" Line 107: Result of 32-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <async_receiver>.
+
+Elaborating module <BaudTickGen(ClkFrequency=100000000,Baud=115200,Oversampling=8)>.
+
+Elaborating module <async_transmitter>.
+
+Elaborating module <BaudTickGen(ClkFrequency=100000000,Baud=115200)>.
+WARNING:HDLCompiler:1127 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\ppu\ppu_vga.v" Line 238: Assignment to txd_busy ignored, since the identifier is never used
+
+Elaborating module <video_sync>.
+WARNING:HDLCompiler:413 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\video_sync.v" Line 68: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\video_sync.v" Line 78: Result of 11-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <text_menu_gen>.
+
+Elaborating module <font_rom>.
+
+Elaborating module <xilinx_dual_port_ram_sync(ADDR_WIDTH=12,DATA_WIDTH=7)>.
+WARNING:HDLCompiler:413 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\text_menu_gen.v" Line 79: Result of 32-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\text_menu_gen.v" Line 84: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:552 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\ppu\ppu_vga.v" Line 241: Input port reset is not connected on this instance
+
+Elaborating module <ppu_ri>.
+
+Elaborating module <ppu_bg>.
+
+Elaborating module <ppu_spr>.
+
+Elaborating module <hci>.
+
+Elaborating module <uart(SYS_CLK_FREQ=100000000,BAUD_RATE=38400,DATA_BITS=8,STOP_BITS=1,PARITY_MODE=1)>.
+
+Elaborating module <uart_baud_clk(SYS_CLK_FREQ=100000000,BAUD=38400,BAUD_CLK_OVERSAMPLE_RATE=16)>.
+
+Elaborating module <uart_rx(DATA_BITS=8,STOP_BITS=1,PARITY_MODE=1,BAUD_CLK_OVERSAMPLE_RATE=16)>.
+
+Elaborating module <uart_tx(DATA_BITS=8,STOP_BITS=1,PARITY_MODE=1,BAUD_CLK_OVERSAMPLE_RATE=16)>.
+
+Elaborating module <fifo(DATA_BITS=8,ADDR_BITS=3)>.
+WARNING:HDLCompiler:552 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\nes_top.v" Line 124: Input port reset is not connected on this instance
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <nes_top>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\nes_top.v".
+WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'deb_toggle_menu', is tied to GND.
+INFO:Xst:3210 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\nes_top.v" line 124: Output port <db_level> of the instance <deb_toggle_menu> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <toggle_menu>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
+Unit <nes_top> synthesized.
+
+Synthesizing Unit <rp2a03>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\rp2a03.v".
+INFO:Xst:3210 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\rp2a03.v" line 130: Output port <joypad_level> of the instance <buttons> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\rp2a03.v" line 130: Output port <btn_strobe> of the instance <buttons> is unconnected or connected to loadless signal.
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <rp2a03> synthesized.
+
+Synthesizing Unit <cpu>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\cpu.v".
+    Found 6-bit register for signal <q_clk_phase>.
+    Found 2-bit register for signal <q_irq_sel>.
+    Found 1-bit register for signal <q_rst>.
+    Found 1-bit register for signal <q_nres>.
+    Found 1-bit register for signal <q_nmi>.
+    Found 1-bit register for signal <q_nnmi>.
+    Found 8-bit register for signal <q_ac>.
+    Found 8-bit register for signal <q_x>.
+    Found 8-bit register for signal <q_y>.
+    Found 1-bit register for signal <q_c>.
+    Found 1-bit register for signal <q_d>.
+    Found 1-bit register for signal <q_i>.
+    Found 1-bit register for signal <q_n>.
+    Found 1-bit register for signal <q_v>.
+    Found 1-bit register for signal <q_z>.
+    Found 8-bit register for signal <q_abh>.
+    Found 8-bit register for signal <q_abl>.
+    Found 1-bit register for signal <q_acr>.
+    Found 8-bit register for signal <q_ai>.
+    Found 8-bit register for signal <q_bi>.
+    Found 8-bit register for signal <q_dor>.
+    Found 8-bit register for signal <q_ir>.
+    Found 8-bit register for signal <q_pchs>.
+    Found 8-bit register for signal <q_pcls>.
+    Found 8-bit register for signal <q_s>.
+    Found 3-bit register for signal <q_t>.
+    Found 8-bit register for signal <q_pcl>.
+    Found 8-bit register for signal <q_pch>.
+    Found 8-bit register for signal <q_dl>.
+    Found 8-bit register for signal <q_pd>.
+    Found 8-bit register for signal <q_add>.
+    Found 1-bit register for signal <q_ready>.
+    Found finite state machine <FSM_0> for signal <q_t>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 54                                             |
+    | Inputs             | 21                                             |
+    | Outputs            | 6                                              |
+    | Clock              | clk_in (rising_edge)                           |
+    | Reset              | _n2050 (positive)                              |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 6-bit adder for signal <q_clk_phase[5]_GND_3_o_add_9_OUT> created at line 378.
+    Found 9-bit adder for signal <n1758> created at line 2016.
+    Found 9-bit adder for signal <BUS_0002_GND_3_o_add_865_OUT> created at line 2016.
+    Found 16-bit adder for signal <q_pchs[7]_GND_3_o_add_933_OUT> created at line 2251.
+    Found 32x1-bit Read Only RAM for signal <q_ir[4]_GND_3_o_Mux_340_o>
+    Found 128x1-bit Read Only RAM for signal <q_ir[6]_GND_3_o_Mux_388_o>
+    Found 64x1-bit Read Only RAM for signal <q_ir[7]_GND_3_o_Mux_391_o>
+    Found 128x1-bit Read Only RAM for signal <q_ir[7]_GND_3_o_Mux_399_o>
+    Found 256x60-bit Read Only RAM for signal <_n2561>
+    Found 128x3-bit Read Only RAM for signal <_n2693>
+    Found 128x3-bit Read Only RAM for signal <_n2839>
+    Found 128x2-bit Read Only RAM for signal <_n2987>
+    Found 64x2-bit Read Only RAM for signal <_n3052>
+    Found 4x2-bit Read Only RAM for signal <_n3255>
+    Found 3-bit 8-to-1 multiplexer for signal <d_t> created at line 539.
+    Found 1-bit 8-to-1 multiplexer for signal <load_prg_byte> created at line 754.
+    Found 1-bit 7-to-1 multiplexer for signal <adc_op> created at line 764.
+    Found 1-bit 7-to-1 multiplexer for signal <and_op> created at line 765.
+    Found 1-bit 7-to-1 multiplexer for signal <r_nw_out> created at line 43.
+    Found 1-bit 7-to-1 multiplexer for signal <cmp_op> created at line 769.
+    Found 1-bit 7-to-1 multiplexer for signal <eor_op> created at line 777.
+    Found 1-bit 7-to-1 multiplexer for signal <ora_op> created at line 786.
+    Found 1-bit 7-to-1 multiplexer for signal <ac_to_ai> created at line 828.
+    Found 1-bit 7-to-1 multiplexer for signal <dl_to_bi> created at line 839.
+    Found 1-bit 7-to-1 multiplexer for signal <invdl_to_bi> created at line 840.
+    Found 1-bit 7-to-1 multiplexer for signal <lda_op> created at line 781.
+    Found 1-bit 6-to-1 multiplexer for signal <dl_to_abh> created at line 812.
+    Found 1-bit 7-to-1 multiplexer for signal <dl_to_ai> created at line 829.
+    Found 1-bit 7-to-1 multiplexer for signal <neg1_to_ai> created at line 831.
+    Found 1-bit 7-to-1 multiplexer for signal <zero_to_ai> created at line 835.
+    Found 1-bit 7-to-1 multiplexer for signal <ldx_op> created at line 782.
+    Found 1-bit 7-to-1 multiplexer for signal <ldy_op> created at line 783.
+    Found 1-bit 7-to-1 multiplexer for signal <dl_to_s> created at line 851.
+    Found 1-bit 7-to-1 multiplexer for signal <ac_to_dor> created at line 802.
+    Found 1-bit 4-to-1 multiplexer for signal <_n1917> created at line 815.
+    Found 1-bit 3-to-1 multiplexer for signal <_n1921> created at line 854.
+    Found 1-bit 4-to-1 multiplexer for signal <_n1923> created at line 803.
+    Found 1-bit 3-to-1 multiplexer for signal <_n1925> created at line 838.
+    Found 1-bit 4-to-1 multiplexer for signal <_n1927> created at line 833.
+    Found 1-bit 4-to-1 multiplexer for signal <_n1929> created at line 834.
+    Found 1-bit 3-to-1 multiplexer for signal <_n1931> created at line 805.
+    Found 1-bit 3-to-1 multiplexer for signal <_n1935> created at line 837.
+    Found 1-bit 4-to-1 multiplexer for signal <_n1947> created at line 807.
+    Found 1-bit 4-to-1 multiplexer for signal <_n1953> created at line 814.
+    Found 1-bit 4-to-1 multiplexer for signal <_n1959> created at line 804.
+    Found 8-bit 7-to-1 multiplexer for signal <dbgreg_out> created at line 49.
+    Found 1-bit comparator equal for signal <acr_q_ai[7]_equal_186_o> created at line 600
+    Summary:
+	inferred  10 RAM(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred 156 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred 258 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <cpu> synthesized.
+
+Synthesizing Unit <apu>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu.v".
+INFO:Xst:3210 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu.v" line 107: Output port <f_pulse_out> of the instance <apu_frame_counter_blk> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <q_pulse0_en>.
+    Found 1-bit register for signal <q_pulse1_en>.
+    Found 1-bit register for signal <q_triangle_en>.
+    Found 1-bit register for signal <q_noise_en>.
+    Found 6-bit register for signal <q_clk_cnt>.
+    Found 6-bit adder for signal <q_clk_cnt[5]_GND_4_o_add_4_OUT> created at line 84.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  10 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <apu> synthesized.
+
+Synthesizing Unit <apu_div_1>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_div.v".
+        PERIOD_BITS = 1
+    Found 1-bit register for signal <q_cnt>.
+    Found 1-bit adder for signal <q_cnt[0]_GND_5_o_add_2_OUT<0>> created at line 59.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 D-type flip-flop(s).
+Unit <apu_div_1> synthesized.
+
+Synthesizing Unit <apu_frame_counter>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_frame_counter.v".
+    Found 1-bit register for signal <q_seq_mode>.
+    Found 1-bit register for signal <q_irq_inhibit>.
+    Found 15-bit register for signal <q_apu_cycle_cnt>.
+    Found 15-bit adder for signal <q_apu_cycle_cnt[14]_GND_6_o_add_3_OUT> created at line 73.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred  15 Multiplexer(s).
+Unit <apu_frame_counter> synthesized.
+
+Synthesizing Unit <apu_pulse_1>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_pulse.v".
+        CHANNEL = 1'b0
+    Found 2-bit register for signal <q_duty>.
+    Found 3-bit register for signal <q_sequencer_cnt>.
+    Found 8-bit register for signal <q_sweep_reg>.
+    Found 1-bit register for signal <q_sweep_reload>.
+    Found 1-bit register for signal <q_length_counter_halt>.
+    Found 11-bit register for signal <q_timer_period>.
+    Found 3-bit subtractor for signal <q_sequencer_cnt[2]_GND_7_o_sub_13_OUT> created at line 117.
+    Found 12-bit adder for signal <GND_7_o_GND_7_o_add_28_OUT> created at line 171.
+    Found 12-bit adder for signal <GND_7_o_GND_7_o_add_31_OUT> created at line 172.
+    Found 12-bit shifter logical right for signal <n0091> created at line 172
+    Found 1-bit 4-to-1 multiplexer for signal <seq_bit> created at line 100.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <apu_pulse_1> synthesized.
+
+Synthesizing Unit <apu_envelope_generator>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_envelope_generator.v".
+    Found 4-bit register for signal <q_cnt>.
+    Found 1-bit register for signal <q_start_flag>.
+    Found 6-bit register for signal <q_reg>.
+    Found 4-bit subtractor for signal <q_cnt[3]_GND_8_o_sub_7_OUT> created at line 90.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <apu_envelope_generator> synthesized.
+
+Synthesizing Unit <apu_div_2>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_div.v".
+        PERIOD_BITS = 4
+    Found 4-bit register for signal <q_cnt>.
+    Found 4-bit subtractor for signal <q_cnt[3]_GND_9_o_sub_5_OUT> created at line 59.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <apu_div_2> synthesized.
+
+Synthesizing Unit <apu_div_3>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_div.v".
+        PERIOD_BITS = 12
+    Found 12-bit register for signal <q_cnt>.
+    Found 12-bit subtractor for signal <q_cnt[11]_GND_10_o_sub_5_OUT> created at line 59.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <apu_div_3> synthesized.
+
+Synthesizing Unit <apu_div_4>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_div.v".
+        PERIOD_BITS = 3
+    Found 3-bit register for signal <q_cnt>.
+    Found 3-bit subtractor for signal <q_cnt[2]_GND_11_o_sub_5_OUT> created at line 59.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <apu_div_4> synthesized.
+
+Synthesizing Unit <apu_length_counter>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_length_counter.v".
+    Found 8-bit register for signal <q_length>.
+    Found 8-bit subtractor for signal <q_length[7]_GND_12_o_sub_6_OUT> created at line 103.
+    Found 32x8-bit Read Only RAM for signal <length_in[4]_GND_12_o_wide_mux_3_OUT>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <apu_length_counter> synthesized.
+
+Synthesizing Unit <apu_pulse_2>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_pulse.v".
+        CHANNEL = 1'b1
+    Found 2-bit register for signal <q_duty>.
+    Found 3-bit register for signal <q_sequencer_cnt>.
+    Found 8-bit register for signal <q_sweep_reg>.
+    Found 1-bit register for signal <q_sweep_reload>.
+    Found 1-bit register for signal <q_length_counter_halt>.
+    Found 11-bit register for signal <q_timer_period>.
+    Found 3-bit subtractor for signal <q_sequencer_cnt[2]_GND_13_o_sub_13_OUT> created at line 117.
+    Found 12-bit adder for signal <GND_13_o_GND_13_o_add_28_OUT> created at line 171.
+    Found 12-bit adder for signal <n0098> created at line 172.
+    Found 12-bit adder for signal <GND_13_o_GND_13_o_add_32_OUT> created at line 172.
+    Found 12-bit shifter logical right for signal <n0093> created at line 172
+    Found 1-bit 4-to-1 multiplexer for signal <seq_bit> created at line 100.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <apu_pulse_2> synthesized.
+
+Synthesizing Unit <apu_triangle>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_triangle.v".
+    Found 1-bit register for signal <q_linear_counter_halt>.
+    Found 8-bit register for signal <q_linear_counter_cntl>.
+    Found 7-bit register for signal <q_linear_counter_val>.
+    Found 1-bit register for signal <q_length_counter_halt>.
+    Found 5-bit register for signal <q_seq>.
+    Found 11-bit register for signal <q_timer_period>.
+    Found 7-bit subtractor for signal <q_linear_counter_val[6]_GND_14_o_sub_15_OUT> created at line 102.
+    Found 5-bit adder for signal <q_seq[4]_GND_14_o_add_25_OUT> created at line 158.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   6 Multiplexer(s).
+Unit <apu_triangle> synthesized.
+
+Synthesizing Unit <apu_div_5>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_div.v".
+        PERIOD_BITS = 11
+    Found 11-bit register for signal <q_cnt>.
+    Found 11-bit subtractor for signal <q_cnt[10]_GND_15_o_sub_5_OUT> created at line 59.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <apu_div_5> synthesized.
+
+Synthesizing Unit <apu_noise>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_noise.v".
+    Found 15-bit register for signal <q_lfsr>.
+    Found 1-bit register for signal <q_mode>.
+    Found 1-bit register for signal <q_length_counter_halt>.
+    Found 11-bit register for signal <q_timer_period>.
+    Found 16x11-bit Read Only RAM for signal <PWR_22_o_GND_16_o_mux_35_OUT>
+    Summary:
+	inferred   1 RAM(s).
+	inferred  28 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <apu_noise> synthesized.
+
+Synthesizing Unit <apu_mixer>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\apu\apu_mixer.v".
+    Found 6-bit register for signal <q_pwm_cnt>.
+    Found 5-bit adder for signal <n0037> created at line 55.
+    Found 6-bit adder for signal <n0040[5:0]> created at line 92.
+    Found 7-bit adder for signal <n0043> created at line 92.
+    Found 6-bit adder for signal <mixed_out> created at line 174.
+    Found 6-bit adder for signal <d_pwm_cnt> created at line 195.
+    Found 32x6-bit Read Only RAM for signal <pulse_out>
+    Found 128x6-bit Read Only RAM for signal <tnd_out>
+    Found 6-bit comparator greater for signal <audio_out> created at line 202
+    Summary:
+	inferred   2 RAM(s).
+	inferred   5 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <apu_mixer> synthesized.
+
+Synthesizing Unit <joypad_buttons>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\joypad_buttons.v".
+WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'deb_unit1', is tied to GND.
+WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'deb_unit2', is tied to GND.
+WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'deb_unit3', is tied to GND.
+WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'deb_unit4', is tied to GND.
+WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'deb_unit5', is tied to GND.
+WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'deb_unit6', is tied to GND.
+WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'deb_unit7', is tied to GND.
+WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'deb_unit8', is tied to GND.
+    Found 8-bit register for signal <joypad_reg>.
+    Found 8-bit register for signal <d_jp1_state>.
+    Found 8-bit register for signal <q_jp1_state>.
+    Found 16-bit register for signal <q_addr>.
+    Found 9-bit register for signal <q_jp1_read_state>.
+    Found 9-bit register for signal <q_jp2_read_state>.
+    Found 1-bit register for signal <q_strobe_state>.
+    Found 8-bit comparator not equal for signal <n0004> created at line 107
+    Found 16-bit comparator equal for signal <n0019> created at line 180
+    Summary:
+	inferred  59 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <joypad_buttons> synthesized.
+
+Synthesizing Unit <debounce_1>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\debounce.v".
+        N = 21
+    Found 21-bit register for signal <q_reg>.
+    Found 2-bit register for signal <state_reg>.
+    Found finite state machine <FSM_1> for signal <state_reg>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 21-bit subtractor for signal <_n0040> created at line 67.
+    Found 21-bit 4-to-1 multiplexer for signal <q_next> created at line 49.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <debounce_1> synthesized.
+
+Synthesizing Unit <sprdma>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cpu\sprdma.v".
+    Found 16-bit register for signal <q_addr>.
+    Found 2-bit register for signal <q_cnt>.
+    Found 8-bit register for signal <q_data>.
+    Found 2-bit register for signal <q_state>.
+    Found finite state machine <FSM_2> for signal <q_cnt>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk_in (rising_edge)                           |
+    | Reset              | rst_in (positive)                              |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_3> for signal <q_state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 5                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk_in (rising_edge)                           |
+    | Reset              | rst_in (positive)                              |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit adder for signal <q_addr[15]_GND_20_o_add_15_OUT> created at line 117.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <sprdma> synthesized.
+
+Synthesizing Unit <sigma_delta_dac>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\sigma_delta_dac.v".
+        MSBI = 7
+    Found 1-bit register for signal <DACout>.
+    Found 10-bit register for signal <SigmaLatch>.
+    Found 10-bit adder for signal <DeltaAdder> created at line 19.
+    Found 10-bit adder for signal <SigmaAdder> created at line 22.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+Unit <sigma_delta_dac> synthesized.
+
+Synthesizing Unit <debounce>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise\debounce.v".
+        N = 21
+    Found 21-bit register for signal <q_reg>.
+    Found 2-bit register for signal <state_reg>.
+    Found 21-bit subtractor for signal <_n0040> created at line 67.
+    Found 4x1-bit Read Only RAM for signal <db_level>
+    Found 21-bit 4-to-1 multiplexer for signal <q_next> created at line 49.
+    Found 2-bit 4-to-1 multiplexer for signal <state_next> created at line 49.
+    HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <state_reg> would allow inference of a finite state machine and as consequence better performance and smaller area.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+	inferred  14 Multiplexer(s).
+Unit <debounce> synthesized.
+
+Synthesizing Unit <cart>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cart\cart.v".
+    Summary:
+	inferred   6 Multiplexer(s).
+Unit <cart> synthesized.
+
+Synthesizing Unit <single_port_ram_sync_1>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\block_ram\block_ram.v".
+        ADDR_WIDTH = 15
+        DATA_WIDTH = 8
+    Found 32768x8-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Found 15-bit register for signal <q_addr_a>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  15 D-type flip-flop(s).
+Unit <single_port_ram_sync_1> synthesized.
+
+Synthesizing Unit <single_port_ram_sync_2>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\block_ram\block_ram.v".
+        ADDR_WIDTH = 13
+        DATA_WIDTH = 8
+    Found 8192x8-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Found 13-bit register for signal <q_addr_a>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  13 D-type flip-flop(s).
+Unit <single_port_ram_sync_2> synthesized.
+
+Synthesizing Unit <wram>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\wram.v".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <wram> synthesized.
+
+Synthesizing Unit <single_port_ram_sync_3>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\block_ram\block_ram.v".
+        ADDR_WIDTH = 11
+        DATA_WIDTH = 8
+    Found 2048x8-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Found 11-bit register for signal <q_addr_a>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  11 D-type flip-flop(s).
+Unit <single_port_ram_sync_3> synthesized.
+
+Synthesizing Unit <vram>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\vram.v".
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <vram> synthesized.
+
+Synthesizing Unit <ppu>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\ppu\ppu.v".
+    Found 1-bit register for signal <q_pri_obj_col>.
+    Found 192-bit register for signal <n0097[191:0]>.
+    Found 6-bit 32-to-1 multiplexer for signal <ri_pram_din<5:0>> created at line 269.
+    Found 6-bit 32-to-1 multiplexer for signal <PWR_36_o_palette_ram[31][5]_wide_mux_53_OUT> created at line 301.
+    Found 6-bit 16-to-1 multiplexer for signal <bg_palette_idx[3]_palette_ram[15][5]_wide_mux_54_OUT> created at line 302.
+    Summary:
+	inferred 193 D-type flip-flop(s).
+	inferred  39 Multiplexer(s).
+Unit <ppu> synthesized.
+
+Synthesizing Unit <ppu_vga>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\ppu\ppu_vga.v".
+WARNING:Xst:2898 - Port 'reset', unconnected in block instance 'vsync_unit', is tied to GND.
+WARNING:Xst:647 - Input <joypad<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\ppu\ppu_vga.v" line 234: Output port <RxD_idle> of the instance <uart_receiver> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\ppu\ppu_vga.v" line 234: Output port <RxD_endofpacket> of the instance <uart_receiver> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\ppu\ppu_vga.v" line 237: Output port <TxD_busy> of the instance <uart_transmitter> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <q_vblank>.
+    Found 1-bit register for signal <menu_clk>.
+    Found 3-bit register for signal <rgb_reg>.
+    Found 8-bit register for signal <q_rgb>.
+    Found 10-bit subtractor for signal <nes_x_out> created at line 120.
+    Found 10-bit subtractor for signal <nes_x_next> created at line 122.
+    Found 1-bit adder for signal <menu_clk_PWR_37_o_add_21_OUT<0>> created at line 291.
+    Found 64x8-bit Read Only RAM for signal <_n0315>
+WARNING:Xst:737 - Found 1-bit latch for signal <d_rgb<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_rgb<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_rgb<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_rgb<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_rgb<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_rgb<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_rgb<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <d_rgb<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 10-bit comparator lessequal for signal <n0009> created at line 124
+    Found 10-bit comparator greater for signal <nes_y_out[9]_GND_31_o_LessThan_9_o> created at line 124
+    Found 10-bit comparator lessequal for signal <n0013> created at line 124
+    Found 10-bit comparator not equal for signal <n0067> created at line 336
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   8 Latch(s).
+	inferred   4 Comparator(s).
+	inferred  31 Multiplexer(s).
+Unit <ppu_vga> synthesized.
+
+Synthesizing Unit <vga_sync>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\vga_sync\vga_sync.v".
+    Found 10-bit register for signal <q_hcnt>.
+    Found 10-bit register for signal <q_vcnt>.
+    Found 1-bit register for signal <q_hsync>.
+    Found 1-bit register for signal <q_vsync>.
+    Found 1-bit register for signal <q_en>.
+    Found 2-bit register for signal <q_mod3_cnt>.
+    Found 2-bit adder for signal <q_mod3_cnt[1]_GND_32_o_add_5_OUT> created at line 87.
+    Found 10-bit adder for signal <q_hcnt[9]_GND_32_o_add_11_OUT> created at line 94.
+    Found 10-bit adder for signal <q_vcnt[9]_GND_32_o_add_27_OUT> created at line 108.
+    Found 10-bit subtractor for signal <x> created at line 39.
+    Found 10-bit subtractor for signal <x_next> created at line 41.
+    Found 10-bit comparator lessequal for signal <n0018> created at line 97
+    Found 10-bit comparator greater for signal <q_hcnt[9]_PWR_38_o_LessThan_19_o> created at line 97
+    Found 10-bit comparator lessequal for signal <n0022> created at line 98
+    Found 10-bit comparator greater for signal <q_vcnt[9]_GND_32_o_LessThan_21_o> created at line 98
+    Found 10-bit comparator greater for signal <q_hcnt[9]_PWR_38_o_LessThan_22_o> created at line 100
+    Found 10-bit comparator greater for signal <q_vcnt[9]_GND_32_o_LessThan_23_o> created at line 100
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  25 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <vga_sync> synthesized.
+
+Synthesizing Unit <async_receiver>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\async.v".
+        ClkFrequency = 100000000
+        Baud = 115200
+        Oversampling = 8
+    Found 2-bit register for signal <Filter_cnt>.
+    Found 1-bit register for signal <RxD_bit>.
+    Found 3-bit register for signal <OversamplingCnt>.
+    Found 4-bit register for signal <RxD_state>.
+    Found 8-bit register for signal <RxD_data>.
+    Found 1-bit register for signal <RxD_data_ready>.
+    Found 6-bit register for signal <GapCnt>.
+    Found 1-bit register for signal <RxD_endofpacket>.
+    Found 2-bit register for signal <RxD_sync>.
+    Found finite state machine <FSM_6> for signal <RxD_state>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 32                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit subtractor for signal <Filter_cnt[1]_GND_41_o_sub_10_OUT> created at line 123.
+    Found 2-bit adder for signal <Filter_cnt[1]_GND_41_o_add_6_OUT> created at line 121.
+    Found 3-bit adder for signal <OversamplingCnt[2]_GND_41_o_add_18_OUT> created at line 134.
+    Found 6-bit adder for signal <GapCnt[5]_GND_41_o_add_44_OUT> created at line 169.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <async_receiver> synthesized.
+
+Synthesizing Unit <BaudTickGen_1>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\async.v".
+        ClkFrequency = 100000000
+        Baud = 115200
+        Oversampling = 8
+    Found 19-bit register for signal <Acc>.
+    Found 19-bit adder for signal <GND_42_o_BUS_0793_mux_2_OUT> created at line 197.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+Unit <BaudTickGen_1> synthesized.
+
+Synthesizing Unit <async_transmitter>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\async.v".
+        ClkFrequency = 100000000
+        Baud = 115200
+    Found 4-bit register for signal <TxD_state>.
+    Found 8-bit register for signal <TxD_shift>.
+    Found finite state machine <FSM_7> for signal <TxD_state>.
+    -----------------------------------------------------------------------
+    | States             | 12                                             |
+    | Transitions        | 24                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Power Up State     | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <async_transmitter> synthesized.
+
+Synthesizing Unit <BaudTickGen_2>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\async.v".
+        ClkFrequency = 100000000
+        Baud = 115200
+        Oversampling = 1
+    Found 19-bit register for signal <Acc>.
+    Found 19-bit adder for signal <n0007> created at line 197.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <BaudTickGen_2> synthesized.
+
+Synthesizing Unit <video_sync>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\video_sync.v".
+    Found 10-bit register for signal <v_count_reg>.
+    Found 10-bit register for signal <h_count_reg>.
+    Found 1-bit register for signal <v_sync_reg>.
+    Found 1-bit register for signal <h_sync_reg>.
+    Found 1-bit register for signal <mod2_reg>.
+    Found 10-bit adder for signal <h_count_reg[9]_GND_45_o_add_4_OUT> created at line 68.
+    Found 10-bit adder for signal <v_count_reg[9]_GND_45_o_add_7_OUT> created at line 78.
+    Found 10-bit comparator lessequal for signal <n0015> created at line 84
+    Found 10-bit comparator lessequal for signal <n0017> created at line 85
+    Found 10-bit comparator lessequal for signal <n0020> created at line 87
+    Found 10-bit comparator lessequal for signal <n0022> created at line 88
+    Found 10-bit comparator greater for signal <h_count_reg[9]_PWR_45_o_LessThan_15_o> created at line 91
+    Found 10-bit comparator greater for signal <v_count_reg[9]_GND_45_o_LessThan_16_o> created at line 91
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  23 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+Unit <video_sync> synthesized.
+
+Synthesizing Unit <text_menu_gen>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\text_menu_gen.v".
+WARNING:Xst:647 - Input <btn_select> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\text_menu_gen.v" line 49: Output port <dout_a> of the instance <video_ram> is unconnected or connected to loadless signal.
+    Found 5-bit register for signal <cur_y_reg>.
+    Found 10-bit register for signal <pix_x1_reg>.
+    Found 3-bit register for signal <pix_x2_reg<2:0>>.
+    Found 10-bit register for signal <pix_y1_reg>.
+    Found 5-bit register for signal <pix_y2_reg<8:4>>.
+    Found 7-bit register for signal <cur_x_reg>.
+    Found 6-bit subtractor for signal <GND_46_o_GND_46_o_sub_35_OUT> created at line 90.
+    Found 8-bit adder for signal <n0125[7:0]> created at line 81.
+    Found 6-bit adder for signal <n0127[5:0]> created at line 88.
+    Found 1-bit 8-to-1 multiplexer for signal <font_bit> created at line 76.
+WARNING:Xst:737 - Found 1-bit latch for signal <show_cursor>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 5-bit comparator greater for signal <cur_y_reg[4]_PWR_46_o_LessThan_30_o> created at line 86
+    Found 5-bit comparator equal for signal <pix_y2_reg[8]_cur_y_reg[4]_equal_50_o> created at line 102
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   1 Latch(s).
+	inferred   2 Comparator(s).
+	inferred  12 Multiplexer(s).
+Unit <text_menu_gen> synthesized.
+
+Synthesizing Unit <font_rom>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\font_rom.v".
+    Found 11-bit register for signal <addr_reg>.
+    Found 2048x8-bit Read Only RAM for signal <data>
+    Summary:
+	inferred   1 RAM(s).
+	inferred  11 D-type flip-flop(s).
+Unit <font_rom> synthesized.
+
+Synthesizing Unit <xilinx_dual_port_ram_sync>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\dual_port_ram_sync.v".
+        ADDR_WIDTH = 12
+        DATA_WIDTH = 7
+    Found 12-bit register for signal <addr_b_reg>.
+    Found 12-bit register for signal <addr_a_reg>.
+    Found 4096x7-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Summary:
+	inferred   2 RAM(s).
+	inferred  24 D-type flip-flop(s).
+Unit <xilinx_dual_port_ram_sync> synthesized.
+
+Synthesizing Unit <ppu_ri>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\ppu\ppu_ri.v".
+    Found 5-bit register for signal <q_vt>.
+    Found 1-bit register for signal <q_v>.
+    Found 3-bit register for signal <q_fh>.
+    Found 5-bit register for signal <q_ht>.
+    Found 1-bit register for signal <q_h>.
+    Found 1-bit register for signal <q_s>.
+    Found 8-bit register for signal <q_cpu_d_out>.
+    Found 1-bit register for signal <q_upd_cntrs_out>.
+    Found 1-bit register for signal <q_nvbl_en>.
+    Found 1-bit register for signal <q_spr_h>.
+    Found 1-bit register for signal <q_spr_pt_sel>.
+    Found 1-bit register for signal <q_addr_incr>.
+    Found 1-bit register for signal <q_spr_en>.
+    Found 1-bit register for signal <q_bg_en>.
+    Found 1-bit register for signal <q_spr_ls_clip>.
+    Found 1-bit register for signal <q_bg_ls_clip>.
+    Found 1-bit register for signal <q_vblank>.
+    Found 1-bit register for signal <q_byte_sel>.
+    Found 8-bit register for signal <q_rd_buf>.
+    Found 1-bit register for signal <q_rd_rdy>.
+    Found 8-bit register for signal <q_spr_ram_a>.
+    Found 1-bit register for signal <q_ncs_in>.
+    Found 1-bit register for signal <q_vblank_in>.
+    Found 3-bit register for signal <q_fv>.
+    Found 8-bit adder for signal <q_spr_ram_a[7]_GND_50_o_add_27_OUT> created at line 271.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  57 D-type flip-flop(s).
+	inferred  34 Multiplexer(s).
+Unit <ppu_ri> synthesized.
+
+Synthesizing Unit <ppu_bg>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\ppu\ppu_bg.v".
+    Found 5-bit register for signal <q_vtc>.
+    Found 1-bit register for signal <q_vc>.
+    Found 5-bit register for signal <q_htc>.
+    Found 1-bit register for signal <q_hc>.
+    Found 8-bit register for signal <q_par>.
+    Found 2-bit register for signal <q_ar>.
+    Found 8-bit register for signal <q_pd0>.
+    Found 8-bit register for signal <q_pd1>.
+    Found 9-bit register for signal <q_bg_bit3_shift>.
+    Found 9-bit register for signal <q_bg_bit2_shift>.
+    Found 16-bit register for signal <q_bg_bit1_shift>.
+    Found 16-bit register for signal <q_bg_bit0_shift>.
+    Found 3-bit register for signal <q_fvc>.
+    Found 10-bit adder for signal <q_fvc[2]_GND_51_o_add_23_OUT> created at line 136.
+    Found 15-bit adder for signal <q_fvc[2]_GND_51_o_add_24_OUT> created at line 138.
+    Found 9-bit adder for signal <q_vc_GND_51_o_add_29_OUT> created at line 153.
+    Found 6-bit adder for signal <q_hc_GND_51_o_add_34_OUT> created at line 161.
+    Found 8-bit shifter logical right for signal <n0226> created at line 299
+    Found 4-bit 8-to-1 multiplexer for signal <n0262> created at line 317.
+    Found 10-bit comparator greater for signal <nes_y_in[9]_GND_51_o_LessThan_49_o> created at line 239
+    Found 10-bit comparator not equal for signal <n0069> created at line 245
+    Found 10-bit comparator greater for signal <nes_x_in[9]_GND_51_o_LessThan_54_o> created at line 254
+    Found 10-bit comparator lessequal for signal <n0077> created at line 254
+    Found 10-bit comparator greater for signal <nes_x_in[9]_GND_51_o_LessThan_56_o> created at line 254
+    Found 10-bit comparator greater for signal <nes_x_in[9]_GND_51_o_LessThan_89_o> created at line 316
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  91 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred  67 Multiplexer(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <ppu_bg> synthesized.
+
+Synthesizing Unit <ppu_spr>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\ppu\ppu_spr.v".
+    Found 256x8:64x32-bit dual-port RAM <Mram_m_oam> for signal <m_oam>.
+    Found 8x25-bit dual-port RAM <Mram_m_stm> for signal <m_stm>.
+    Found 4-bit register for signal <q_in_rng_cnt>.
+    Found 1-bit register for signal <q_spr_overflow>.
+    Found 8-bit register for signal <q_pd1>.
+    Found 8-bit register for signal <q_pd0>.
+    Found 8-bit register for signal <q_obj0_pd1_shift>.
+    Found 8-bit register for signal <q_obj1_pd1_shift>.
+    Found 8-bit register for signal <q_obj2_pd1_shift>.
+    Found 8-bit register for signal <q_obj3_pd1_shift>.
+    Found 8-bit register for signal <q_obj4_pd1_shift>.
+    Found 8-bit register for signal <q_obj5_pd1_shift>.
+    Found 8-bit register for signal <q_obj6_pd1_shift>.
+    Found 8-bit register for signal <q_obj7_pd1_shift>.
+    Found 8-bit register for signal <q_obj0_pd0_shift>.
+    Found 8-bit register for signal <q_obj1_pd0_shift>.
+    Found 8-bit register for signal <q_obj2_pd0_shift>.
+    Found 8-bit register for signal <q_obj3_pd0_shift>.
+    Found 8-bit register for signal <q_obj4_pd0_shift>.
+    Found 8-bit register for signal <q_obj5_pd0_shift>.
+    Found 8-bit register for signal <q_obj6_pd0_shift>.
+    Found 8-bit register for signal <q_obj7_pd0_shift>.
+    Found 224-bit register for signal <n0317[223:0]>.
+    Found 10-bit subtractor for signal <nes_x_in[9]_GND_52_o_sub_141_OUT> created at line 513.
+    Found 10-bit subtractor for signal <nes_x_in[9]_GND_52_o_sub_147_OUT> created at line 524.
+    Found 10-bit subtractor for signal <nes_x_in[9]_GND_52_o_sub_153_OUT> created at line 535.
+    Found 10-bit subtractor for signal <nes_x_in[9]_GND_52_o_sub_159_OUT> created at line 546.
+    Found 10-bit subtractor for signal <nes_x_in[9]_GND_52_o_sub_165_OUT> created at line 557.
+    Found 10-bit subtractor for signal <nes_x_in[9]_GND_52_o_sub_171_OUT> created at line 568.
+    Found 10-bit subtractor for signal <nes_x_in[9]_GND_52_o_sub_177_OUT> created at line 579.
+    Found 10-bit subtractor for signal <nes_x_in[9]_GND_52_o_sub_183_OUT> created at line 590.
+    Found 8-bit adder for signal <oam_rd_y> created at line 153.
+    Found 4-bit adder for signal <q_in_rng_cnt[3]_GND_52_o_add_39_OUT> created at line 198.
+    Found 9-bit subtractor for signal <rng_cmp_res> created at line 148.
+    Found 10-bit comparator greater for signal <nes_y_next_in[9]_GND_52_o_LessThan_36_o> created at line 186
+    Found 10-bit comparator greater for signal <nes_x_in[9]_GND_52_o_LessThan_38_o> created at line 193
+    Found 10-bit comparator greater for signal <nes_x_in[9]_GND_52_o_LessThan_60_o> created at line 266
+    Found 4-bit comparator greater for signal <GND_52_o_q_in_rng_cnt[3]_LessThan_61_o> created at line 268
+    Found 10-bit comparator greater for signal <nes_y_in[9]_GND_52_o_LessThan_140_o> created at line 506
+    Found 10-bit comparator greater for signal <nes_x_in[9]_GND_52_o_LessThan_205_o> created at line 599
+    Summary:
+	inferred   2 RAM(s).
+	inferred  11 Adder/Subtractor(s).
+	inferred 373 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred  47 Multiplexer(s).
+Unit <ppu_spr> synthesized.
+
+Synthesizing Unit <hci>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\hci\hci.v".
+    Found 3-bit register for signal <q_decode_cnt>.
+    Found 17-bit register for signal <q_execute_cnt>.
+    Found 16-bit register for signal <q_addr>.
+    Found 2-bit register for signal <q_err_code>.
+    Found 40-bit register for signal <q_cart_cfg>.
+    Found 1-bit register for signal <q_cart_cfg_upd>.
+    Found 8-bit register for signal <q_tx_data>.
+    Found 1-bit register for signal <q_wr_en>.
+    Found 5-bit register for signal <q_state>.
+    Found finite state machine <FSM_8> for signal <q_state>.
+    -----------------------------------------------------------------------
+    | States             | 19                                             |
+    | Transitions        | 105                                            |
+    | Inputs             | 18                                             |
+    | Outputs            | 6                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00001                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 17-bit subtractor for signal <_n0336> created at line 634.
+    Found 16-bit adder for signal <q_addr[15]_GND_53_o_add_168_OUT> created at line 559.
+    Found 3-bit adder for signal <q_decode_cnt[2]_GND_53_o_add_174_OUT> created at line 573.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  88 D-type flip-flop(s).
+	inferred  92 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <hci> synthesized.
+
+Synthesizing Unit <uart>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\uart\uart.v".
+        SYS_CLK_FREQ = 100000000
+        BAUD_RATE = 38400
+        DATA_BITS = 8
+        STOP_BITS = 1
+        PARITY_MODE = 1
+INFO:Xst:3210 - "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\uart\uart.v" line 126: Output port <full> of the instance <uart_rx_fifo> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <q_rx_parity_err>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <uart> synthesized.
+
+Synthesizing Unit <uart_baud_clk>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\uart\/uart_baud_clk.v".
+        SYS_CLK_FREQ = 100000000
+        BAUD = 38400
+        BAUD_CLK_OVERSAMPLE_RATE = 16
+    Found 16-bit register for signal <q_cnt>.
+    Found 16-bit adder for signal <q_cnt[15]_GND_55_o_add_2_OUT> created at line 55.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <uart_baud_clk> synthesized.
+
+Synthesizing Unit <uart_rx>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\uart\/uart_rx.v".
+        DATA_BITS = 8
+        STOP_BITS = 1
+        PARITY_MODE = 1
+        BAUD_CLK_OVERSAMPLE_RATE = 16
+    Found 1-bit register for signal <q_rx>.
+    Found 4-bit register for signal <q_oversample_tick_cnt>.
+    Found 8-bit register for signal <q_data>.
+    Found 3-bit register for signal <q_data_bit_idx>.
+    Found 5-bit register for signal <q_state>.
+    Found 1-bit register for signal <q_done_tick>.
+    Found 1-bit register for signal <q_parity_err>.
+    Found finite state machine <FSM_9> for signal <q_state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 15                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00001                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <q_oversample_tick_cnt[3]_GND_56_o_add_4_OUT> created at line 95.
+    Found 3-bit adder for signal <q_data_bit_idx[2]_GND_56_o_add_14_OUT> created at line 139.
+    Found 1-bit comparator not equal for signal <n0028> created at line 148
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  10 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <uart_rx> synthesized.
+
+Synthesizing Unit <uart_tx>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\uart\/uart_tx.v".
+        DATA_BITS = 8
+        STOP_BITS = 1
+        PARITY_MODE = 1
+        BAUD_CLK_OVERSAMPLE_RATE = 16
+    Found 1-bit register for signal <q_tx>.
+    Found 4-bit register for signal <q_baud_clk_tick_cnt>.
+    Found 8-bit register for signal <q_data>.
+    Found 3-bit register for signal <q_data_bit_idx>.
+    Found 5-bit register for signal <q_state>.
+    Found 1-bit register for signal <q_tx_done_tick>.
+    Found 1-bit register for signal <q_parity_bit>.
+    Found finite state machine <FSM_10> for signal <q_state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 16                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 5                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00001                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4-bit adder for signal <q_baud_clk_tick_cnt[3]_GND_58_o_add_4_OUT> created at line 96.
+    Found 3-bit adder for signal <q_data_bit_idx[2]_GND_58_o_add_15_OUT> created at line 139.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  18 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <uart_tx> synthesized.
+
+Synthesizing Unit <fifo>.
+    Related source file is "C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\src\cmn\vga_sync/fifo/fifo.v".
+        DATA_BITS = 8
+        ADDR_BITS = 3
+    Found 8x8-bit dual-port RAM <Mram_q_data_array> for signal <q_data_array>.
+    Found 3-bit register for signal <q_wr_ptr>.
+    Found 1-bit register for signal <q_empty>.
+    Found 1-bit register for signal <q_full>.
+    Found 3-bit register for signal <q_rd_ptr>.
+    Found 3-bit subtractor for signal <q_wr_ptr[2]_q_rd_ptr[2]_sub_14_OUT> created at line 97.
+    Found 3-bit subtractor for signal <q_rd_ptr[2]_q_wr_ptr[2]_sub_16_OUT> created at line 103.
+    Found 3-bit adder for signal <q_wr_ptr[2]_GND_60_o_add_6_OUT> created at line 84.
+    Found 3-bit adder for signal <q_rd_ptr[2]_GND_60_o_add_10_OUT> created at line 88.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <fifo> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 30
+ 128x1-bit single-port Read Only RAM                   : 2
+ 128x2-bit single-port Read Only RAM                   : 1
+ 128x3-bit single-port Read Only RAM                   : 2
+ 128x6-bit single-port Read Only RAM                   : 1
+ 16x11-bit single-port Read Only RAM                   : 1
+ 2048x8-bit dual-port RAM                              : 2
+ 2048x8-bit single-port Read Only RAM                  : 1
+ 256x60-bit single-port Read Only RAM                  : 1
+ 256x8:64x32-bit dual-port RAM                         : 1
+ 32768x8-bit dual-port RAM                             : 1
+ 32x1-bit single-port Read Only RAM                    : 1
+ 32x6-bit single-port Read Only RAM                    : 1
+ 32x8-bit single-port Read Only RAM                    : 4
+ 4096x7-bit dual-port RAM                              : 2
+ 4x1-bit single-port Read Only RAM                     : 1
+ 4x2-bit single-port Read Only RAM                     : 1
+ 64x1-bit single-port Read Only RAM                    : 1
+ 64x2-bit single-port Read Only RAM                    : 1
+ 64x8-bit single-port Read Only RAM                    : 1
+ 8192x8-bit dual-port RAM                              : 1
+ 8x25-bit dual-port RAM                                : 1
+ 8x8-bit dual-port RAM                                 : 2
+# Adders/Subtractors                                   : 97
+ 1-bit adder                                           : 2
+ 10-bit adder                                          : 7
+ 10-bit subtractor                                     : 12
+ 11-bit subtractor                                     : 1
+ 12-bit adder                                          : 3
+ 12-bit subtractor                                     : 3
+ 15-bit adder                                          : 2
+ 16-bit adder                                          : 4
+ 17-bit subtractor                                     : 1
+ 19-bit adder                                          : 2
+ 2-bit adder                                           : 1
+ 2-bit addsub                                          : 1
+ 21-bit subtractor                                     : 9
+ 3-bit adder                                           : 8
+ 3-bit subtractor                                      : 8
+ 4-bit adder                                           : 3
+ 4-bit subtractor                                      : 6
+ 5-bit adder                                           : 2
+ 6-bit adder                                           : 8
+ 6-bit subtractor                                      : 1
+ 7-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 3
+ 8-bit subtractor                                      : 4
+ 9-bit adder                                           : 3
+ 9-bit subtractor                                      : 1
+# Registers                                            : 234
+ 1-bit register                                        : 77
+ 10-bit register                                       : 7
+ 11-bit register                                       : 8
+ 12-bit register                                       : 5
+ 13-bit register                                       : 1
+ 15-bit register                                       : 3
+ 16-bit register                                       : 6
+ 17-bit register                                       : 1
+ 19-bit register                                       : 2
+ 192-bit register                                      : 1
+ 2-bit register                                        : 9
+ 21-bit register                                       : 9
+ 224-bit register                                      : 1
+ 3-bit register                                        : 16
+ 4-bit register                                        : 9
+ 40-bit register                                       : 1
+ 5-bit register                                        : 6
+ 6-bit register                                        : 7
+ 7-bit register                                        : 2
+ 8-bit register                                        : 58
+ 9-bit register                                        : 5
+# Latches                                              : 9
+ 1-bit latch                                           : 9
+# Comparators                                          : 35
+ 1-bit comparator equal                                : 1
+ 1-bit comparator not equal                            : 1
+ 10-bit comparator greater                             : 16
+ 10-bit comparator lessequal                           : 9
+ 10-bit comparator not equal                           : 2
+ 16-bit comparator equal                               : 1
+ 4-bit comparator greater                              : 1
+ 5-bit comparator equal                                : 1
+ 5-bit comparator greater                              : 1
+ 6-bit comparator greater                              : 1
+ 8-bit comparator not equal                            : 1
+# Multiplexers                                         : 762
+ 1-bit 2-to-1 multiplexer                              : 374
+ 1-bit 3-to-1 multiplexer                              : 4
+ 1-bit 4-to-1 multiplexer                              : 9
+ 1-bit 6-to-1 multiplexer                              : 1
+ 1-bit 7-to-1 multiplexer                              : 17
+ 1-bit 8-to-1 multiplexer                              : 2
+ 10-bit 2-to-1 multiplexer                             : 3
+ 11-bit 2-to-1 multiplexer                             : 6
+ 12-bit 2-to-1 multiplexer                             : 6
+ 14-bit 2-to-1 multiplexer                             : 2
+ 15-bit 2-to-1 multiplexer                             : 4
+ 16-bit 2-to-1 multiplexer                             : 20
+ 17-bit 2-to-1 multiplexer                             : 18
+ 19-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 8
+ 2-bit 4-to-1 multiplexer                              : 1
+ 21-bit 2-to-1 multiplexer                             : 36
+ 21-bit 4-to-1 multiplexer                             : 9
+ 28-bit 2-to-1 multiplexer                             : 11
+ 3-bit 2-to-1 multiplexer                              : 32
+ 3-bit 8-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 7
+ 4-bit 2-to-1 multiplexer                              : 29
+ 4-bit 8-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 10
+ 6-bit 16-to-1 multiplexer                             : 1
+ 6-bit 2-to-1 multiplexer                              : 44
+ 6-bit 32-to-1 multiplexer                             : 2
+ 7-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 100
+ 8-bit 7-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 3
+ 12-bit shifter logical right                          : 2
+ 8-bit shifter logical right                           : 1
+# FSMs                                                 : 16
+# Xors                                                 : 5
+ 1-bit xor2                                            : 1
+ 1-bit xor4                                            : 1
+ 1-bit xor8                                            : 2
+ 8-bit xor2                                            : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <q_dl_1> in Unit <cpu_blk> is equivalent to the following FF/Latch, which will be removed : <q_pd_1> 
+INFO:Xst:2261 - The FF/Latch <q_dl_0> in Unit <cpu_blk> is equivalent to the following FF/Latch, which will be removed : <q_pd_0> 
+INFO:Xst:2261 - The FF/Latch <q_dl_7> in Unit <cpu_blk> is equivalent to the following FF/Latch, which will be removed : <q_pd_7> 
+INFO:Xst:2261 - The FF/Latch <q_dl_6> in Unit <cpu_blk> is equivalent to the following FF/Latch, which will be removed : <q_pd_6> 
+INFO:Xst:2261 - The FF/Latch <q_dl_5> in Unit <cpu_blk> is equivalent to the following FF/Latch, which will be removed : <q_pd_5> 
+INFO:Xst:2261 - The FF/Latch <q_dl_4> in Unit <cpu_blk> is equivalent to the following FF/Latch, which will be removed : <q_pd_4> 
+INFO:Xst:2261 - The FF/Latch <q_dl_3> in Unit <cpu_blk> is equivalent to the following FF/Latch, which will be removed : <q_pd_3> 
+INFO:Xst:2261 - The FF/Latch <q_dl_2> in Unit <cpu_blk> is equivalent to the following FF/Latch, which will be removed : <q_pd_2> 
+INFO:Xst:2261 - The FF/Latch <q_linear_counter_cntl_7> in Unit <apu_triangle_blk> is equivalent to the following FF/Latch, which will be removed : <q_length_counter_halt> 
+WARNING:Xst:1710 - FF/Latch <q_jp2_read_state_0> (without init value) has a constant value of 0 in block <buttons>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <q_jp2_read_state_1> of sequential type is unconnected in block <buttons>.
+WARNING:Xst:2677 - Node <q_jp2_read_state_2> of sequential type is unconnected in block <buttons>.
+WARNING:Xst:2677 - Node <q_jp2_read_state_3> of sequential type is unconnected in block <buttons>.
+WARNING:Xst:2677 - Node <q_jp2_read_state_4> of sequential type is unconnected in block <buttons>.
+WARNING:Xst:2677 - Node <q_jp2_read_state_5> of sequential type is unconnected in block <buttons>.
+WARNING:Xst:2677 - Node <q_jp2_read_state_6> of sequential type is unconnected in block <buttons>.
+WARNING:Xst:2677 - Node <q_jp2_read_state_7> of sequential type is unconnected in block <buttons>.
+WARNING:Xst:2677 - Node <q_jp2_read_state_8> of sequential type is unconnected in block <buttons>.
+WARNING:Xst:2677 - Node <pix_x1_reg_3> of sequential type is unconnected in block <text_gen_unit>.
+WARNING:Xst:2677 - Node <pix_x1_reg_4> of sequential type is unconnected in block <text_gen_unit>.
+WARNING:Xst:2677 - Node <pix_x1_reg_5> of sequential type is unconnected in block <text_gen_unit>.
+WARNING:Xst:2677 - Node <pix_x1_reg_6> of sequential type is unconnected in block <text_gen_unit>.
+WARNING:Xst:2677 - Node <pix_x1_reg_7> of sequential type is unconnected in block <text_gen_unit>.
+WARNING:Xst:2677 - Node <pix_x1_reg_8> of sequential type is unconnected in block <text_gen_unit>.
+WARNING:Xst:2677 - Node <pix_x1_reg_9> of sequential type is unconnected in block <text_gen_unit>.
+WARNING:Xst:2677 - Node <pix_y1_reg_0> of sequential type is unconnected in block <text_gen_unit>.
+WARNING:Xst:2677 - Node <pix_y1_reg_1> of sequential type is unconnected in block <text_gen_unit>.
+WARNING:Xst:2677 - Node <pix_y1_reg_2> of sequential type is unconnected in block <text_gen_unit>.
+WARNING:Xst:2677 - Node <pix_y1_reg_3> of sequential type is unconnected in block <text_gen_unit>.
+WARNING:Xst:2677 - Node <pix_y1_reg_9> of sequential type is unconnected in block <text_gen_unit>.
+
+Synthesizing (advanced) Unit <apu>.
+The following registers are absorbed into counter <q_clk_cnt>: 1 register on signal <q_clk_cnt>.
+Unit <apu> synthesized (advanced).
+
+Synthesizing (advanced) Unit <apu_div_1>.
+The following registers are absorbed into counter <q_cnt_0>: 1 register on signal <q_cnt_0>.
+Unit <apu_div_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <apu_div_2>.
+The following registers are absorbed into counter <q_cnt>: 1 register on signal <q_cnt>.
+Unit <apu_div_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <apu_div_3>.
+The following registers are absorbed into counter <q_cnt>: 1 register on signal <q_cnt>.
+Unit <apu_div_3> synthesized (advanced).
+
+Synthesizing (advanced) Unit <apu_div_4>.
+The following registers are absorbed into counter <q_cnt>: 1 register on signal <q_cnt>.
+Unit <apu_div_4> synthesized (advanced).
+
+Synthesizing (advanced) Unit <apu_div_5>.
+The following registers are absorbed into counter <q_cnt>: 1 register on signal <q_cnt>.
+Unit <apu_div_5> synthesized (advanced).
+
+Synthesizing (advanced) Unit <apu_envelope_generator>.
+The following registers are absorbed into counter <q_cnt>: 1 register on signal <q_cnt>.
+Unit <apu_envelope_generator> synthesized (advanced).
+
+Synthesizing (advanced) Unit <apu_length_counter>.
+The following registers are absorbed into counter <q_length>: 1 register on signal <q_length>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_length_in[4]_GND_12_o_wide_mux_3_OUT> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <length_in>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <apu_length_counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <apu_mixer>.
+The following registers are absorbed into counter <q_pwm_cnt>: 1 register on signal <q_pwm_cnt>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_pulse_out> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 6-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0037>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <pulse_out>     |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_tnd_out> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 6-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <n0043>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <tnd_out>       |          |
+    -----------------------------------------------------------------------
+Unit <apu_mixer> synthesized (advanced).
+
+Synthesizing (advanced) Unit <apu_noise>.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <q_dor> prevents it from being combined with the RAM <Mram_PWR_22_o_GND_16_o_mux_35_OUT> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 11-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <d_in<3:0>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_PWR_22_o_GND_16_o_mux_35_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+Unit <apu_noise> synthesized (advanced).
+
+Synthesizing (advanced) Unit <apu_pulse_1>.
+The following registers are absorbed into counter <q_sequencer_cnt>: 1 register on signal <q_sequencer_cnt>.
+Unit <apu_pulse_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <apu_pulse_2>.
+The following registers are absorbed into counter <q_sequencer_cnt>: 1 register on signal <q_sequencer_cnt>.
+Unit <apu_pulse_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <apu_triangle>.
+The following registers are absorbed into counter <q_linear_counter_val>: 1 register on signal <q_linear_counter_val>.
+The following registers are absorbed into counter <q_seq>: 1 register on signal <q_seq>.
+Unit <apu_triangle> synthesized (advanced).
+
+Synthesizing (advanced) Unit <async_receiver>.
+The following registers are absorbed into counter <OversamplingCnt>: 1 register on signal <OversamplingCnt>.
+The following registers are absorbed into counter <Filter_cnt>: 1 register on signal <Filter_cnt>.
+The following registers are absorbed into counter <GapCnt>: 1 register on signal <GapCnt>.
+Unit <async_receiver> synthesized (advanced).
+
+Synthesizing (advanced) Unit <cart>.
+INFO:Xst:3226 - The RAM <prgrom_bram/Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <prgrom_bram/q_addr_a>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32768-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <prgrom_bram_we> | high     |
+    |     addrA          | connected to signal <(prgrom_bram_a,prg_a_in<13:0>)> |          |
+    |     diA            | connected to signal <prg_d_in>      |          |
+    |     doA            | connected to signal <prgrom_bram_dout> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <chrrom_pat_bram/Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <chrrom_pat_bram/q_addr_a>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8192-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <chrrom_pat_bram_we> | high     |
+    |     addrA          | connected to signal <chr_a_in<12:0>> |          |
+    |     diA            | connected to signal <chr_d_in>      |          |
+    |     doA            | connected to signal <chrrom_pat_bram_dout> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <cart> synthesized (advanced).
+
+Synthesizing (advanced) Unit <cpu>.
+The following registers are absorbed into counter <q_clk_phase>: 1 register on signal <q_clk_phase>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n3255> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <q_irq_sel>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_q_ir[4]_GND_3_o_Mux_340_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 1-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <q_ir<4:0>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_q_ir[6]_GND_3_o_Mux_388_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 1-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <q_ir<6:0>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2561> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 60-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <q_ir>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2987> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 2-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <q_ir<7:1>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2839> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 3-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(q_ir<7>,q_ir<5:0>)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n3052> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 2-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(q_ir<7>,q_ir<4:0>)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_q_ir[7]_GND_3_o_Mux_399_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 1-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(q_ir<7:2>,q_ir<0>)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2693> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 128-word x 3-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(q_ir<7:6>,q_ir<4:0>)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_q_ir[7]_GND_3_o_Mux_391_o> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 1-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(q_ir<7:6>,q_ir<4:1>)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <cpu> synthesized (advanced).
+
+Synthesizing (advanced) Unit <debounce>.
+INFO:Xst:3231 - The small RAM <Mram_db_level> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 1-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <state_reg>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <db_level>      |          |
+    -----------------------------------------------------------------------
+Unit <debounce> synthesized (advanced).
+
+Synthesizing (advanced) Unit <fifo>.
+The following registers are absorbed into counter <q_wr_ptr>: 1 register on signal <q_wr_ptr>.
+The following registers are absorbed into counter <q_rd_ptr>: 1 register on signal <q_rd_ptr>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_q_data_array> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <reset>         | low      |
+    |     addrA          | connected to signal <q_wr_ptr>      |          |
+    |     diA            | connected to signal <d_data>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 8-bit                      |          |
+    |     addrB          | connected to signal <q_rd_ptr>      |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <fifo> synthesized (advanced).
+
+Synthesizing (advanced) Unit <font_rom>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_data> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 8-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <addr_reg>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data>          |          |
+    -----------------------------------------------------------------------
+Unit <font_rom> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ppu_ri>.
+The following registers are absorbed into counter <q_spr_ram_a>: 1 register on signal <q_spr_ram_a>.
+Unit <ppu_ri> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ppu_spr>.
+The following registers are absorbed into counter <q_in_rng_cnt>: 1 register on signal <q_in_rng_cnt>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_m_oam> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 8-bit                    |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <oam_wr_in>     | high     |
+    |     addrA          | connected to signal <oam_a_in>      |          |
+    |     diA            | connected to signal <oam_d_in>      |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 64-word x 32-bit                    |          |
+    |     addrB          | connected to signal <nes_x_in<7:2>> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_m_stm> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 25-bit                     |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <nes_x_in[9]_q_in_rng_cnt[3]_AND_205_o_0_0> | high     |
+    |     addrA          | connected to signal <q_in_rng_cnt<2:0>> |          |
+    |     diA            | connected to signal <(stm_din,_n0568<15:8>,_n0568<31:24>,_n0568<17:16>,_n0568<21:22>,stm_din)> |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 25-bit                     |          |
+    |     addrB          | connected to signal <nes_x_in<5:3>> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <ppu_spr> synthesized (advanced).
+
+Synthesizing (advanced) Unit <ppu_vga>.
+The following registers are absorbed into counter <menu_clk>: 1 register on signal <menu_clk>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0315> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <sys_palette_idx_in> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <ppu_vga> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sigma_delta_dac>.
+The following registers are absorbed into accumulator <SigmaLatch>: 1 register on signal <SigmaLatch>.
+Unit <sigma_delta_dac> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sprdma>.
+The following registers are absorbed into counter <q_addr>: 1 register on signal <q_addr>.
+Unit <sprdma> synthesized (advanced).
+
+Synthesizing (advanced) Unit <uart_baud_clk>.
+The following registers are absorbed into counter <q_cnt>: 1 register on signal <q_cnt>.
+Unit <uart_baud_clk> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vga_sync>.
+The following registers are absorbed into counter <q_mod3_cnt>: 1 register on signal <q_mod3_cnt>.
+The following registers are absorbed into counter <q_vcnt>: 1 register on signal <q_vcnt>.
+Unit <vga_sync> synthesized (advanced).
+
+Synthesizing (advanced) Unit <video_sync>.
+The following registers are absorbed into counter <v_count_reg>: 1 register on signal <v_count_reg>.
+The following registers are absorbed into counter <h_count_reg>: 1 register on signal <h_count_reg>.
+Unit <video_sync> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vram>.
+INFO:Xst:3226 - The RAM <vram_bram/Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <vram_bram/q_addr_a>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <vram_bram_we>  | high     |
+    |     addrA          | connected to signal <a_in>          |          |
+    |     diA            | connected to signal <d_in>          |          |
+    |     doA            | connected to signal <vram_bram_dout> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <vram> synthesized (advanced).
+
+Synthesizing (advanced) Unit <wram>.
+INFO:Xst:3226 - The RAM <wram_bram/Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <wram_bram/q_addr_a>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 2048-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk_in>        | rise     |
+    |     weA            | connected to signal <wram_bram_we>  | high     |
+    |     addrA          | connected to signal <a_in>          |          |
+    |     diA            | connected to signal <d_in>          |          |
+    |     doA            | connected to signal <wram_bram_dout> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <wram> synthesized (advanced).
+
+Synthesizing (advanced) Unit <xilinx_dual_port_ram_sync>.
+INFO:Xst:3227 - The RAM <Mram_ram>, combined with <Mram_ram1>, will be implemented as a BLOCK RAM, absorbing the following register(s): <addr_a_reg> <addr_b_reg>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 7-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <we>            | high     |
+    |     addrA          | connected to signal <addr_a>        |          |
+    |     diA            | connected to signal <din_a>         |          |
+    |     doA            | connected to signal <dout_a>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 4096-word x 7-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <addr_b>        |          |
+    |     doB            | connected to signal <dout_b>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <xilinx_dual_port_ram_sync> synthesized (advanced).
+WARNING:Xst:2677 - Node <q_jp2_read_state_1> of sequential type is unconnected in block <joypad_buttons>.
+WARNING:Xst:2677 - Node <q_jp2_read_state_2> of sequential type is unconnected in block <joypad_buttons>.
+WARNING:Xst:2677 - Node <q_jp2_read_state_3> of sequential type is unconnected in block <joypad_buttons>.
+WARNING:Xst:2677 - Node <q_jp2_read_state_4> of sequential type is unconnected in block <joypad_buttons>.
+WARNING:Xst:2677 - Node <q_jp2_read_state_5> of sequential type is unconnected in block <joypad_buttons>.
+WARNING:Xst:2677 - Node <q_jp2_read_state_6> of sequential type is unconnected in block <joypad_buttons>.
+WARNING:Xst:2677 - Node <q_jp2_read_state_7> of sequential type is unconnected in block <joypad_buttons>.
+WARNING:Xst:2677 - Node <q_jp2_read_state_8> of sequential type is unconnected in block <joypad_buttons>.
+WARNING:Xst:2677 - Node <pix_x1_reg_3> of sequential type is unconnected in block <text_menu_gen>.
+WARNING:Xst:2677 - Node <pix_x1_reg_4> of sequential type is unconnected in block <text_menu_gen>.
+WARNING:Xst:2677 - Node <pix_x1_reg_5> of sequential type is unconnected in block <text_menu_gen>.
+WARNING:Xst:2677 - Node <pix_x1_reg_6> of sequential type is unconnected in block <text_menu_gen>.
+WARNING:Xst:2677 - Node <pix_x1_reg_7> of sequential type is unconnected in block <text_menu_gen>.
+WARNING:Xst:2677 - Node <pix_x1_reg_8> of sequential type is unconnected in block <text_menu_gen>.
+WARNING:Xst:2677 - Node <pix_x1_reg_9> of sequential type is unconnected in block <text_menu_gen>.
+WARNING:Xst:2677 - Node <pix_y1_reg_0> of sequential type is unconnected in block <text_menu_gen>.
+WARNING:Xst:2677 - Node <pix_y1_reg_1> of sequential type is unconnected in block <text_menu_gen>.
+WARNING:Xst:2677 - Node <pix_y1_reg_2> of sequential type is unconnected in block <text_menu_gen>.
+WARNING:Xst:2677 - Node <pix_y1_reg_3> of sequential type is unconnected in block <text_menu_gen>.
+WARNING:Xst:2677 - Node <pix_y1_reg_9> of sequential type is unconnected in block <text_menu_gen>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 29
+ 128x1-bit single-port distributed Read Only RAM       : 2
+ 128x2-bit single-port distributed Read Only RAM       : 1
+ 128x3-bit single-port distributed Read Only RAM       : 2
+ 128x6-bit single-port distributed Read Only RAM       : 1
+ 16x11-bit single-port distributed Read Only RAM       : 1
+ 2048x8-bit single-port block RAM                      : 2
+ 2048x8-bit single-port distributed Read Only RAM      : 1
+ 256x60-bit single-port distributed Read Only RAM      : 1
+ 256x8:64x32-bit dual-port distributed RAM             : 1
+ 32768x8-bit single-port block RAM                     : 1
+ 32x1-bit single-port distributed Read Only RAM        : 1
+ 32x6-bit single-port distributed Read Only RAM        : 1
+ 32x8-bit single-port distributed Read Only RAM        : 4
+ 4096x7-bit dual-port block RAM                        : 1
+ 4x1-bit single-port distributed Read Only RAM         : 1
+ 4x2-bit single-port distributed Read Only RAM         : 1
+ 64x1-bit single-port distributed Read Only RAM        : 1
+ 64x2-bit single-port distributed Read Only RAM        : 1
+ 64x8-bit single-port distributed Read Only RAM        : 1
+ 8192x8-bit single-port block RAM                      : 1
+ 8x25-bit dual-port distributed RAM                    : 1
+ 8x8-bit dual-port distributed RAM                     : 2
+# Adders/Subtractors                                   : 56
+ 10-bit adder                                          : 4
+ 10-bit subtractor                                     : 12
+ 12-bit adder                                          : 3
+ 15-bit adder                                          : 2
+ 16-bit adder                                          : 2
+ 17-bit subtractor                                     : 1
+ 19-bit adder                                          : 2
+ 21-bit subtractor                                     : 9
+ 3-bit adder                                           : 3
+ 3-bit subtractor                                      : 4
+ 4-bit adder                                           : 2
+ 5-bit adder                                           : 1
+ 6-bit adder                                           : 4
+ 6-bit subtractor                                      : 1
+ 7-bit adder                                           : 1
+ 8-bit adder                                           : 2
+ 9-bit adder                                           : 1
+ 9-bit adder carry in                                  : 1
+ 9-bit subtractor                                      : 1
+# Counters                                             : 40
+ 1-bit up counter                                      : 2
+ 10-bit up counter                                     : 3
+ 11-bit down counter                                   : 1
+ 12-bit down counter                                   : 3
+ 16-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+ 2-bit updown counter                                  : 1
+ 3-bit down counter                                    : 4
+ 3-bit up counter                                      : 5
+ 4-bit down counter                                    : 6
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+ 6-bit up counter                                      : 4
+ 7-bit down counter                                    : 1
+ 8-bit down counter                                    : 4
+ 8-bit up counter                                      : 1
+# Accumulators                                         : 1
+ 10-bit up accumulator                                 : 1
+# Registers                                            : 1496
+ Flip-Flops                                            : 1496
+# Comparators                                          : 35
+ 1-bit comparator equal                                : 1
+ 1-bit comparator not equal                            : 1
+ 10-bit comparator greater                             : 16
+ 10-bit comparator lessequal                           : 9
+ 10-bit comparator not equal                           : 2
+ 16-bit comparator equal                               : 1
+ 4-bit comparator greater                              : 1
+ 5-bit comparator equal                                : 1
+ 5-bit comparator greater                              : 1
+ 6-bit comparator greater                              : 1
+ 8-bit comparator not equal                            : 1
+# Multiplexers                                         : 1140
+ 1-bit 2-to-1 multiplexer                              : 802
+ 1-bit 3-to-1 multiplexer                              : 4
+ 1-bit 4-to-1 multiplexer                              : 9
+ 1-bit 6-to-1 multiplexer                              : 1
+ 1-bit 7-to-1 multiplexer                              : 25
+ 1-bit 8-to-1 multiplexer                              : 6
+ 10-bit 2-to-1 multiplexer                             : 3
+ 11-bit 2-to-1 multiplexer                             : 4
+ 12-bit 2-to-1 multiplexer                             : 3
+ 14-bit 2-to-1 multiplexer                             : 2
+ 15-bit 2-to-1 multiplexer                             : 4
+ 16-bit 2-to-1 multiplexer                             : 17
+ 17-bit 2-to-1 multiplexer                             : 18
+ 19-bit 2-to-1 multiplexer                             : 1
+ 2-bit 2-to-1 multiplexer                              : 8
+ 2-bit 4-to-1 multiplexer                              : 1
+ 21-bit 2-to-1 multiplexer                             : 36
+ 21-bit 4-to-1 multiplexer                             : 9
+ 28-bit 2-to-1 multiplexer                             : 3
+ 3-bit 2-to-1 multiplexer                              : 30
+ 3-bit 8-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 7
+ 4-bit 2-to-1 multiplexer                              : 19
+ 5-bit 2-to-1 multiplexer                              : 9
+ 6-bit 16-to-1 multiplexer                             : 1
+ 6-bit 2-to-1 multiplexer                              : 36
+ 6-bit 32-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 78
+ 9-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 3
+ 12-bit shifter logical right                          : 2
+ 8-bit shifter logical right                           : 1
+# FSMs                                                 : 16
+# Xors                                                 : 5
+ 1-bit xor2                                            : 1
+ 1-bit xor4                                            : 1
+ 1-bit xor8                                            : 2
+ 8-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <q_jp2_read_state_0> (without init value) has a constant value of 0 in block <joypad_buttons>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <q_dl_1> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <q_pd_1> 
+INFO:Xst:2261 - The FF/Latch <q_dl_0> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <q_pd_0> 
+INFO:Xst:2261 - The FF/Latch <q_dl_7> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <q_pd_7> 
+INFO:Xst:2261 - The FF/Latch <q_dl_6> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <q_pd_6> 
+INFO:Xst:2261 - The FF/Latch <q_dl_5> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <q_pd_5> 
+INFO:Xst:2261 - The FF/Latch <q_dl_4> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <q_pd_4> 
+INFO:Xst:2261 - The FF/Latch <q_dl_3> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <q_pd_3> 
+INFO:Xst:2261 - The FF/Latch <q_dl_2> in Unit <cpu> is equivalent to the following FF/Latch, which will be removed : <q_pd_2> 
+INFO:Xst:2261 - The FF/Latch <q_linear_counter_cntl_7> in Unit <apu_triangle> is equivalent to the following FF/Latch, which will be removed : <q_length_counter_halt> 
+INFO:Xst:2261 - The FF/Latch <q_length_counter_halt> in Unit <apu_pulse_1> is equivalent to the following FF/Latch, which will be removed : <envelope_generator/q_reg_5> 
+INFO:Xst:2261 - The FF/Latch <q_length_counter_halt> in Unit <apu_pulse_2> is equivalent to the following FF/Latch, which will be removed : <envelope_generator/q_reg_5> 
+INFO:Xst:2261 - The FF/Latch <q_length_counter_halt> in Unit <apu_noise> is equivalent to the following FF/Latch, which will be removed : <envelope_generator/q_reg_5> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <rp2a03_blk/buttons/deb_unit1/FSM_1> on signal <state_reg[1:2]> with gray encoding.
+Optimizing FSM <rp2a03_blk/buttons/deb_unit2/FSM_1> on signal <state_reg[1:2]> with gray encoding.
+Optimizing FSM <rp2a03_blk/buttons/deb_unit3/FSM_1> on signal <state_reg[1:2]> with gray encoding.
+Optimizing FSM <rp2a03_blk/buttons/deb_unit4/FSM_1> on signal <state_reg[1:2]> with gray encoding.
+Optimizing FSM <rp2a03_blk/buttons/deb_unit5/FSM_1> on signal <state_reg[1:2]> with gray encoding.
+Optimizing FSM <rp2a03_blk/buttons/deb_unit6/FSM_1> on signal <state_reg[1:2]> with gray encoding.
+Optimizing FSM <rp2a03_blk/buttons/deb_unit7/FSM_1> on signal <state_reg[1:2]> with gray encoding.
+Optimizing FSM <rp2a03_blk/buttons/deb_unit8/FSM_1> on signal <state_reg[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 11    | 01
+ 10    | 11
+ 01    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <rp2a03_blk/cpu_blk/FSM_0> on signal <q_t[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+ 101   | 101
+ 110   | 110
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <rp2a03_blk/sprdma_blk/FSM_3> on signal <q_state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <rp2a03_blk/sprdma_blk/FSM_2> on signal <q_cnt[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <ppu_blk/ppu_vga_blk/uart_receiver/FSM_6> on signal <RxD_state[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 1000  | 1000
+ 1001  | 1001
+ 1010  | 1010
+ 1011  | 1011
+ 1100  | 1100
+ 1101  | 1101
+ 1110  | 1110
+ 1111  | 1111
+ 0010  | 0010
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <ppu_blk/ppu_vga_blk/uart_transmitter/FSM_7> on signal <TxD_state[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0100  | 0100
+ 0011  | 0011
+ 1000  | 1000
+ 1001  | 1001
+ 1010  | 1010
+ 1011  | 1011
+ 1100  | 1100
+ 1101  | 1101
+ 1110  | 1110
+ 1111  | 1111
+ 0010  | 0010
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <hci_blk/FSM_8> on signal <q_state[1:5]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00001 | 00001
+ 00010 | 00010
+ 00100 | 00100
+ 00110 | 00110
+ 00000 | 00000
+ 01000 | 01000
+ 01001 | 01001
+ 01011 | 01011
+ 01100 | 01100
+ 01110 | 01110
+ 10000 | 10000
+ 10001 | 10001
+ 00011 | 00011
+ 00101 | 00101
+ 00111 | 00111
+ 01010 | 01010
+ 01101 | 01101
+ 01111 | 01111
+ 10010 | 10010
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <hci_blk/uart_blk/uart_rx_blk/FSM_9> on signal <q_state[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00001 | 000
+ 00010 | 001
+ 00100 | 011
+ 01000 | 010
+ 10000 | 110
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <hci_blk/uart_blk/uart_tx_blk/FSM_10> on signal <q_state[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00001 | 000
+ 00010 | 001
+ 00100 | 011
+ 01000 | 010
+ 10000 | 110
+-------------------
+WARNING:Xst:2677 - Node <Acc_0> of sequential type is unconnected in block <BaudTickGen_1>.
+WARNING:Xst:2677 - Node <Acc_1> of sequential type is unconnected in block <BaudTickGen_1>.
+WARNING:Xst:2677 - Node <Acc_2> of sequential type is unconnected in block <BaudTickGen_1>.
+WARNING:Xst:2677 - Node <Acc_3> of sequential type is unconnected in block <BaudTickGen_1>.
+WARNING:Xst:2677 - Node <Acc_0> of sequential type is unconnected in block <BaudTickGen_2>.
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    show_cursor in unit <text_menu_gen>
+
+
+Optimizing unit <BaudTickGen_1> ...
+
+Optimizing unit <nes_top> ...
+
+Optimizing unit <rp2a03> ...
+
+Optimizing unit <joypad_buttons> ...
+
+Optimizing unit <debounce_1> ...
+
+Optimizing unit <cpu> ...
+
+Optimizing unit <apu> ...
+
+Optimizing unit <apu_pulse_1> ...
+
+Optimizing unit <apu_pulse_2> ...
+
+Optimizing unit <apu_triangle> ...
+
+Optimizing unit <apu_noise> ...
+
+Optimizing unit <apu_frame_counter> ...
+
+Optimizing unit <apu_mixer> ...
+
+Optimizing unit <sprdma> ...
+
+Optimizing unit <debounce> ...
+
+Optimizing unit <cart> ...
+
+Optimizing unit <ppu> ...
+
+Optimizing unit <ppu_vga> ...
+
+Optimizing unit <async_receiver> ...
+
+Optimizing unit <async_transmitter> ...
+
+Optimizing unit <BaudTickGen_2> ...
+
+Optimizing unit <video_sync> ...
+
+Optimizing unit <text_menu_gen> ...
+
+Optimizing unit <font_rom> ...
+
+Optimizing unit <ppu_ri> ...
+
+Optimizing unit <ppu_bg> ...
+
+Optimizing unit <ppu_spr> ...
+
+Optimizing unit <hci> ...
+
+Optimizing unit <uart> ...
+
+Optimizing unit <fifo> ...
+
+Optimizing unit <uart_rx> ...
+
+Optimizing unit <uart_tx> ...
+WARNING:Xst:1710 - FF/Latch <ppu_blk/ppu_vga_blk/rgb_reg_2> (without init value) has a constant value of 0 in block <nes_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ppu_blk/ppu_vga_blk/rgb_reg_0> (without init value) has a constant value of 0 in block <nes_top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <rp2a03_blk/apu_blk/apu_frame_counter_blk/q_irq_inhibit> of sequential type is unconnected in block <nes_top>.
+WARNING:Xst:2677 - Node <ppu_blk/ppu_vga_blk/uart_receiver/GapCnt_5> of sequential type is unconnected in block <nes_top>.
+WARNING:Xst:2677 - Node <ppu_blk/ppu_vga_blk/uart_receiver/GapCnt_4> of sequential type is unconnected in block <nes_top>.
+WARNING:Xst:2677 - Node <ppu_blk/ppu_vga_blk/uart_receiver/GapCnt_3> of sequential type is unconnected in block <nes_top>.
+WARNING:Xst:2677 - Node <ppu_blk/ppu_vga_blk/uart_receiver/GapCnt_2> of sequential type is unconnected in block <nes_top>.
+WARNING:Xst:2677 - Node <ppu_blk/ppu_vga_blk/uart_receiver/GapCnt_1> of sequential type is unconnected in block <nes_top>.
+WARNING:Xst:2677 - Node <ppu_blk/ppu_vga_blk/uart_receiver/GapCnt_0> of sequential type is unconnected in block <nes_top>.
+WARNING:Xst:2677 - Node <ppu_blk/ppu_vga_blk/uart_receiver/RxD_endofpacket> of sequential type is unconnected in block <nes_top>.
+INFO:Xst:2261 - The FF/Latch <ppu_blk/ppu_vga_blk/menu_clk> in Unit <nes_top> is equivalent to the following 2 FFs/Latches, which will be removed : <ppu_blk/ppu_vga_blk/uart_receiver/tickgen/Acc_4> <ppu_blk/ppu_vga_blk/vsync_unit/mod2_reg> 
+INFO:Xst:2261 - The FF/Latch <rp2a03_blk/apu_blk/q_clk_cnt_0> in Unit <nes_top> is equivalent to the following FF/Latch, which will be removed : <rp2a03_blk/apu_blk/apu_mixer_blk/q_pwm_cnt_0> 
+INFO:Xst:2261 - The FF/Latch <rp2a03_blk/apu_blk/q_clk_cnt_1> in Unit <nes_top> is equivalent to the following FF/Latch, which will be removed : <rp2a03_blk/apu_blk/apu_mixer_blk/q_pwm_cnt_1> 
+INFO:Xst:2261 - The FF/Latch <rp2a03_blk/apu_blk/q_clk_cnt_2> in Unit <nes_top> is equivalent to the following FF/Latch, which will be removed : <rp2a03_blk/apu_blk/apu_mixer_blk/q_pwm_cnt_2> 
+INFO:Xst:3203 - The FF/Latch <sigma_delta_dac/SigmaLatch_9> in Unit <nes_top> is the opposite to the following FF/Latch, which will be removed : <sigma_delta_dac/SigmaLatch_8> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block nes_top, actual ratio is 145.
+Optimizing block <nes_top> to meet ratio 100 (+ 5) of 1430 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <nes_top>, final ratio is 135.
+
+Final Macro Processing ...
+
+Processing Unit <nes_top> :
+	Found 8-bit shift register for signal <rp2a03_blk/apu_blk/apu_noise_blk/q_lfsr_6>.
+	Found 5-bit shift register for signal <rp2a03_blk/apu_blk/apu_noise_blk/q_lfsr_1>.
+	Found 2-bit shift register for signal <ppu_blk/ppu_vga_blk/uart_receiver/RxD_sync_1>.
+	Found 2-bit shift register for signal <ppu_blk/ppu_vga_blk/text_gen_unit/pix_y2_reg_8>.
+	Found 2-bit shift register for signal <ppu_blk/ppu_vga_blk/text_gen_unit/pix_y2_reg_7>.
+	Found 2-bit shift register for signal <ppu_blk/ppu_vga_blk/text_gen_unit/pix_y2_reg_6>.
+	Found 2-bit shift register for signal <ppu_blk/ppu_vga_blk/text_gen_unit/pix_y2_reg_5>.
+	Found 2-bit shift register for signal <ppu_blk/ppu_vga_blk/text_gen_unit/pix_y2_reg_4>.
+	Found 2-bit shift register for signal <ppu_blk/ppu_vga_blk/text_gen_unit/pix_x2_reg_2>.
+	Found 2-bit shift register for signal <ppu_blk/ppu_vga_blk/text_gen_unit/pix_x2_reg_1>.
+	Found 2-bit shift register for signal <ppu_blk/ppu_vga_blk/text_gen_unit/pix_x2_reg_0>.
+	Found 5-bit shift register for signal <hci_blk/q_cart_cfg_33>.
+Unit <nes_top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 3716
+ Flip-Flops                                            : 3716
+# Shift Registers                                      : 12
+ 2-bit shift register                                  : 9
+ 5-bit shift register                                  : 2
+ 8-bit shift register                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : nes_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 7196
+#      GND                         : 1
+#      INV                         : 300
+#      LUT1                        : 140
+#      LUT2                        : 210
+#      LUT3                        : 426
+#      LUT4                        : 254
+#      LUT5                        : 805
+#      LUT6                        : 3267
+#      MUXCY                       : 549
+#      MUXF7                       : 461
+#      MUXF8                       : 202
+#      VCC                         : 1
+#      XORCY                       : 580
+# FlipFlops/Latches                : 3751
+#      FD                          : 287
+#      FDC                         : 67
+#      FDCE                        : 8
+#      FDE                         : 2479
+#      FDP                         : 2
+#      FDR                         : 116
+#      FDRE                        : 764
+#      FDS                         : 5
+#      FDSE                        : 14
+#      LD                          : 1
+#      LD_1                        : 8
+# RAMS                             : 45
+#      RAM16X1D                    : 17
+#      RAM32M                      : 4
+#      RAMB16BWER                  : 24
+# Shift Registers                  : 12
+#      SRLC16E                     : 12
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 28
+#      IBUF                        : 13
+#      OBUF                        : 15
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            3751  out of  11440    32%  
+ Number of Slice LUTs:                 5464  out of   5720    95%  
+    Number used as Logic:              5402  out of   5720    94%  
+    Number used as Memory:               62  out of   1440     4%  
+       Number used as RAM:               50
+       Number used as SRL:               12
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   7012
+   Number with an unused Flip Flop:    3261  out of   7012    46%  
+   Number with an unused LUT:          1548  out of   7012    22%  
+   Number of fully used LUT-FF pairs:  2203  out of   7012    31%  
+   Number of unique control sets:       368
+
+IO Utilization: 
+ Number of IOs:                          29
+ Number of bonded IOBs:                  29  out of    102    28%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               24  out of     32    75%  
+    Number using Block RAM only:         24
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------------------------------------+-------------------------------------------------------+-------+
+Clock Signal                                                                                      | Clock buffer(FF name)                                 | Load  |
+--------------------------------------------------------------------------------------------------+-------------------------------------------------------+-------+
+CLK_100MHZ                                                                                        | BUFGP                                                 | 3798  |
+ppu_blk/ppu_vga_blk/menu_clk                                                                      | NONE(ppu_blk/ppu_vga_blk/rgb_reg_1)                   | 1     |
+toggle_menu                                                                                       | NONE(ppu_blk/ppu_vga_blk/d_rgb_0)                     | 8     |
+ppu_blk/ppu_vga_blk/text_gen_unit/show_cursor_G(ppu_blk/ppu_vga_blk/text_gen_unit/show_cursor_G:O)| NONE(*)(ppu_blk/ppu_vga_blk/text_gen_unit/show_cursor)| 1     |
+--------------------------------------------------------------------------------------------------+-------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 13.372ns (Maximum Frequency: 74.782MHz)
+   Minimum input arrival time before clock: 6.389ns
+   Maximum output required time after clock: 6.799ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_100MHZ'
+  Clock period: 13.372ns (frequency: 74.782MHz)
+  Total number of paths / destination ports: 13654474 / 7754
+-------------------------------------------------------------------------
+Delay:               13.372ns (Levels of Logic = 10)
+  Source:            ppu_blk/ppu_vga_blk/vga_sync_blk/q_vcnt_8 (FF)
+  Destination:       ppu_blk/palette_ram_0_191 (FF)
+  Source Clock:      CLK_100MHZ rising
+  Destination Clock: CLK_100MHZ rising
+
+  Data Path: ppu_blk/ppu_vga_blk/vga_sync_blk/q_vcnt_8 to ppu_blk/palette_ram_0_191
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            11   0.447   1.227  ppu_blk/ppu_vga_blk/vga_sync_blk/q_vcnt_8 (ppu_blk/ppu_vga_blk/vga_sync_blk/q_vcnt_8)
+     LUT5:I0->O            6   0.203   0.745  ppu_blk/ppu_vga_blk/GND_31_o_GND_31_o_AND_166_o11 (ppu_blk/ppu_vga_blk/GND_31_o_GND_31_o_AND_166_o1)
+     LUT6:I5->O           10   0.205   0.857  ppu_blk/ppu_vga_blk/vga_sync_blk/GND_32_o_GND_32_o_equal_27_o<9>1 (ppu_blk/ppu_vga_blk/vga_sync_blk/GND_32_o_GND_32_o_equal_27_o)
+     LUT6:I5->O            5   0.205   0.943  ppu_blk/ppu_vga_blk/vga_sync_blk/Mmux_y_next9 (ppu_blk/vga_nes_y_next<8>)
+     LUT5:I2->O            1   0.205   0.580  ppu_blk/ppu_bg_blk/GND_51_o_GND_51_o_equal_50_o<9>_SW0 (N348)
+     LUT6:I5->O            4   0.205   0.684  ppu_blk/ppu_bg_blk/GND_51_o_GND_51_o_equal_50_o<9> (ppu_blk/ppu_bg_blk/GND_51_o_GND_51_o_equal_50_o)
+     LUT6:I5->O           18   0.205   1.050  ppu_blk/ppu_bg_blk/en_in_nes_y_in[9]_AND_179_o (ppu_blk/ppu_bg_blk/en_in_nes_y_in[9]_AND_179_o)
+     LUT5:I4->O            6   0.205   0.745  ppu_blk/ppu_bg_blk/vram_a_out<0>111 (ppu_blk/ppu_bg_blk/vram_a_out<0>1)
+     LUT6:I5->O            2   0.205   0.721  ppu_blk/Mmux_vram_a_out14 (ppu_vram_a<9>)
+     LUT6:I4->O           15   0.203   0.982  ppu_blk/ppu_ri_blk/sel_in[2]_q_vblank_select_22_OUT<5>11 (ppu_blk/ppu_ri_blk/sel_in[2]_q_vblank_select_22_OUT<5>1)
+     LUT6:I5->O          168   0.205   2.024  ppu_blk/_n0162_inv1 (ppu_blk/_n0162_inv)
+     FDE:CE                    0.322          ppu_blk/palette_ram_0_0
+    ----------------------------------------
+    Total                     13.372ns (2.815ns logic, 10.557ns route)
+                                       (21.1% logic, 78.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_100MHZ'
+  Total number of paths / destination ports: 1656 / 1544
+-------------------------------------------------------------------------
+Offset:              6.389ns (Levels of Logic = 5)
+  Source:            JOYPAD<2> (PAD)
+  Destination:       ppu_blk/ppu_vga_blk/uart_transmitter/TxD_shift_7 (FF)
+  Destination Clock: CLK_100MHZ rising
+
+  Data Path: JOYPAD<2> to ppu_blk/ppu_vga_blk/uart_transmitter/TxD_shift_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            25   1.222   1.297  JOYPAD_2_IBUF (JOYPAD_2_IBUF)
+     LUT4:I2->O            6   0.203   1.109  rp2a03_blk/buttons/deb_unit3/db_tick1 (joypad_deb<2>)
+     LUT6:I0->O            1   0.203   0.924  ppu_blk/ppu_vga_blk/uart_transmitter/Mmux_TxD_shift[7]_TxD_data[7]_mux_3_OUT81 (ppu_blk/ppu_vga_blk/uart_transmitter/Mmux_TxD_shift[7]_TxD_data[7]_mux_3_OUT8)
+     LUT6:I1->O            1   0.203   0.924  ppu_blk/ppu_vga_blk/uart_transmitter/Mmux_TxD_shift[7]_TxD_data[7]_mux_3_OUT82 (ppu_blk/ppu_vga_blk/uart_transmitter/Mmux_TxD_shift[7]_TxD_data[7]_mux_3_OUT81)
+     LUT6:I1->O            1   0.203   0.000  ppu_blk/ppu_vga_blk/uart_transmitter/Mmux_TxD_shift[7]_TxD_data[7]_mux_3_OUT83 (ppu_blk/ppu_vga_blk/uart_transmitter/TxD_shift[7]_TxD_data[7]_mux_3_OUT<7>)
+     FDE:D                     0.102          ppu_blk/ppu_vga_blk/uart_transmitter/TxD_shift_7
+    ----------------------------------------
+    Total                      6.389ns (2.136ns logic, 4.253ns route)
+                                       (33.4% logic, 66.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_100MHZ'
+  Total number of paths / destination ports: 45 / 15
+-------------------------------------------------------------------------
+Offset:              6.799ns (Levels of Logic = 4)
+  Source:            ppu_blk/ppu_vga_blk/vsync_unit/v_count_reg_8 (FF)
+  Destination:       TFT_DE (PAD)
+  Source Clock:      CLK_100MHZ rising
+
+  Data Path: ppu_blk/ppu_vga_blk/vsync_unit/v_count_reg_8 to TFT_DE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             8   0.447   1.050  ppu_blk/ppu_vga_blk/vsync_unit/v_count_reg_8 (ppu_blk/ppu_vga_blk/vsync_unit/v_count_reg_8)
+     LUT4:I0->O            1   0.203   0.924  ppu_blk/ppu_vga_blk/vsync_unit/video_on_SW0 (N308)
+     LUT6:I1->O            2   0.203   0.617  ppu_blk/ppu_vga_blk/vsync_unit/video_on (ppu_blk/ppu_vga_blk/video_on)
+     LUT3:I2->O            1   0.205   0.579  ppu_blk/ppu_vga_blk/Mmux_vde_reg11 (TFT_DE_OBUF)
+     OBUF:I->O                 2.571          TFT_DE_OBUF (TFT_DE)
+    ----------------------------------------
+    Total                      6.799ns (3.629ns logic, 3.170ns route)
+                                       (53.4% logic, 46.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ppu_blk/ppu_vga_blk/menu_clk'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              4.453ns (Levels of Logic = 2)
+  Source:            ppu_blk/ppu_vga_blk/rgb_reg_1 (FF)
+  Destination:       TFT_GREEN<2> (PAD)
+  Source Clock:      ppu_blk/ppu_vga_blk/menu_clk rising
+
+  Data Path: ppu_blk/ppu_vga_blk/rgb_reg_1 to TFT_GREEN<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.447   0.651  ppu_blk/ppu_vga_blk/rgb_reg_1 (ppu_blk/ppu_vga_blk/rgb_reg_1)
+     LUT3:I2->O            1   0.205   0.579  ppu_blk/ppu_vga_blk/Mmux_g_out_reg11 (TFT_GREEN_0_OBUF)
+     OBUF:I->O                 2.571          TFT_GREEN_0_OBUF (TFT_GREEN<0>)
+    ----------------------------------------
+    Total                      4.453ns (3.223ns logic, 1.230ns route)
+                                       (72.4% logic, 27.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK_100MHZ
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100MHZ     |   13.372|         |         |         |
+toggle_menu    |    1.179|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ppu_blk/ppu_vga_blk/menu_clk
+-----------------------------------------------+---------+---------+---------+---------+
+                                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------------------------------+---------+---------+---------+---------+
+CLK_100MHZ                                     |    7.772|         |         |         |
+ppu_blk/ppu_vga_blk/text_gen_unit/show_cursor_G|         |    3.436|         |         |
+-----------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ppu_blk/ppu_vga_blk/text_gen_unit/show_cursor_G
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100MHZ     |         |         |    2.819|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock toggle_menu
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_100MHZ     |   11.508|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 101.00 secs
+Total CPU time to Xst completion: 100.37 secs
+ 
+--> 
+
+Total memory usage is 352692 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  251 ( 146 filtered)
+Number of infos    :   63 (   0 filtered)
+

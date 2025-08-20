@@ -1,0 +1,44 @@
+#:C9     
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   C:\Users\Stache\Documents\Xilinx_Projects\spartan_mini\fpga_nes-master_tft2\hw\ise
+#Date/Time:
+#:T   Sat Nov 18 10:54:20 2017
+#------------------------------
+	#Reading nes_top.ncd...
+	#Loading device for application Rf_Device from file '6slx9.nph' in environment C:\Users\Stache\Documents\Xilinx\14.7\ISE_DS\ISE\.
+	#   "nes_top" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -3
+	#Design creation date: 2017.11.17.17.35.51
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+select -k comp 'BTN_SOUTH'
+	#3
+unselect comp 'BTN_SOUTH'
+	#4
+select -k comp 'BTN_SOUTH_IBUF_shift11'
+	#5
+unselect comp 'BTN_SOUTH_IBUF_shift11'
+	#6
+select -k comp 'AUDIO'
+	#7
+unselect -all
+	#8
+select comp 'ppu_blk/ppu_spr_blk/m_oam_ff_1878'
+	#comp "ppu_blk/ppu_spr_blk/m_oam_ff_1878",  site "SLICE_X12Y37",  type = SLICEX  (RPM grid X49Y148)
+	#9
+post attr
+	#10
+unpost comp "ppu_blk/ppu_spr_blk/m_oam_ff_1878"
+	#11
+unselect comp 'ppu_blk/ppu_spr_blk/m_oam_ff_1878'
+	#12
+select -k comp 'AUDIO'
+	#13
+unselect comp 'AUDIO'
+	#14
+select -k comp 'BTN_EAST'
